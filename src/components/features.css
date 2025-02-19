@@ -1,0 +1,142 @@
+.tbsa-features {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  }
+  
+  .section-title {
+    margin-bottom: 60px;
+  }
+  
+  .section-title h2 {
+    color: #00563F;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .section-title .subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    cursor: pointer;
+  }
+  
+  .feature-card.feature-visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+  }
+  
+  .feature-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    color: white;
+  }
+  
+  .feature-icon-wrapper i {
+    font-size: 30px;
+    color: white;
+  }
+  
+  .feature-content h3 {
+    color: #00563F;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .feature-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  .feature-hover {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    background: #00563F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 86, 63, 0.15);
+  }
+  
+  .feature-card:hover .feature-hover {
+    bottom: 0;
+    opacity: 1;
+  }
+  
+  .feature-card:hover .feature-icon-wrapper {
+    transform: scale(1.1);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tbsa-features {
+      padding: 60px 0;
+    }
+  
+    .section-title h2 {
+      font-size: 2rem;
+    }
+  
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .feature-card {
+      padding: 20px;
+    }
+  }
