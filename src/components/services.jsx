@@ -182,15 +182,21 @@ export const Services = () => {
 
     // March 2025 Events
     {
-      date: "2025-03-03",
-      title: "Trent Business Club Kickoff",
+      date: "2025-03-01",
+      title: "Buy The River",
       type: "Competation",
-      location: "Trent Student Centre",
-      time: "6:00 PM - 8:00 PM",
+      location: "Gzowski College, Trent University",
+      time: "09:00 AM to 05:00 PM",
       description:
-        "Kick off the new year with our first official networking event. Meet fellow students and local entrepreneurs.",
+        "Trent’s first Finance Case Competition took place on March 1, 2025, challenging participants to showcase their financial expertise. Competitors engaged in a dynamic event filled with strategic problem-solving and high-stakes decision-making.",
       bannerImage:
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "img/events/BTB-banner.png",
+      galleryImages: [
+        "img/events/BTB-3.jpeg",
+        "img/events/BTB-2.jpeg",
+        "img/events/BTB-5.jpeg",
+        "img/events/BTB-4.jpeg",
+      ]
     }
   ];
 
