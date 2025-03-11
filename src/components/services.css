@@ -1,522 +1,1534 @@
+
+
+/* Main Section */
 .trent-events-section {
-    padding: 80px 0;
-    background: #f8f9fa;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f8f9fa, #e9f2ef);
+  position: relative;
+}
+
+.trent-events-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, #004b23, #38b000);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.section-title {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #004b23;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #004b23, #38b000);
+  transform: scaleX(0.7);
+  transition: transform 0.5s;
+}
+
+.section-title:hover h2::after {
+  transform: scaleX(1);
+}
+
+.section-title p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Calendar Container */
+.trent-calendar-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 50px;
+  animation: fadeIn 0.8s ease-out, floatUp 1s ease-out;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trent-calendar-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* Calendar Header */
+.trent-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #004b23, #38b000);
+  color: #fff;
+  padding: 20px 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.trent-calendar-header::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.1) 50%, transparent 51%);
+  background-size: 10px 10px;
+}
+
+/* Modal Styles */
+.trent-event-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.fade-in {
+  animation: fadeInModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.fade-out {
+  animation: fadeOutModal 0.3s ease-out forwards;
+}
+
+.trent-event-modal-content {
+  background: #fff;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.slide-in {
+  animation: slideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+.trent-event-modal-banner {
+  position: relative;
+  height: 250px;
+  min-height: 150px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Add custom scrollbar styling for the modal */
+.trent-event-modal-content::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  transition: width 0.3s ease;
+}
+
+.trent-event-modal-content:hover::-webkit-scrollbar,
+.trent-event-modal-content:focus::-webkit-scrollbar,
+.trent-event-modal-content:active::-webkit-scrollbar {
+  width: 8px;
+}
+
+.trent-event-modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.trent-event-modal-content::-webkit-scrollbar-thumb {
+  background: #004b23;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.trent-event-modal-content:hover::-webkit-scrollbar-track,
+.trent-event-modal-content:focus::-webkit-scrollbar-track,
+.trent-event-modal-content:active::-webkit-scrollbar-track {
+  opacity: 1;
+}
+
+.trent-event-modal-content:hover::-webkit-scrollbar-thumb,
+.trent-event-modal-content:focus::-webkit-scrollbar-thumb,
+.trent-event-modal-content:active::-webkit-scrollbar-thumb {
+  opacity: 1;
+}
+
+.trent-event-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #38b000;
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+  .trent-event-modal-content {
+    max-height: 90vh;
   }
   
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  .trent-event-modal-banner {
+    height: 180px;
+  }
+}
+
+@media (max-height: 700px) {
+  .trent-event-modal-content {
+    max-height: 95vh;
   }
   
-  .section-title {
-    margin-bottom: 40px;
+  .trent-event-modal-banner {
+    height: 150px;
+  }
+}
+
+
+.trent-calendar-header h3 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.trent-calendar-nav {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.trent-calendar-nav:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+.nav-icon {
+  display: block;
+  line-height: 1;
+}
+
+/* Calendar Grid */
+.trent-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background-color: #f0f0f0;
+  padding: 2px;
+}
+
+.trent-calendar-day-header {
+  background-color: #e9ecef;
+  padding: 12px 0;
+  text-align: center;
+  font-weight: 600;
+  color: #004b23;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.trent-calendar-day {
+  min-height: 100px;
+  padding: 8px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s;
+  border: 1px solid #eee;
+}
+
+.trent-calendar-day:hover {
+  background: #f9fcf7;
+  transform: scale(1.02);
+  z-index: 5;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.trent-calendar-day.empty {
+  background-color: #f9f9f9;
+  border: none;
+}
+
+.trent-calendar-day.today {
+  background-color: #e8f5e9;
+  border: 2px solid #004b23;
+}
+
+/* Day Number */
+.day-number {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.today .day-number {
+  background: #004b23;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Event Indicators */
+.trent-event-indicators {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trent-event-indicator {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  background-color: #f0f7ff;
+  border-left: 3px solid #004b23;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #000000;
+}
+
+.trent-event-indicator:hover {
+  background-color: #e0f0ff;
+  transform: translateX(3px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #004b23;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.trent-event-indicator .event-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Event Type Colors */
+.event-type-networking {
+  border-left-color: #28a745;
+}
+.event-type-networking .event-dot {
+  background-color: #28a745;
+}
+
+.event-type-workshop {
+  border-left-color: #ffc107;
+}
+.event-type-workshop .event-dot {
+  background-color: #ffc107;
+}
+
+.event-type-speaker {
+  border-left-color: #17a2b8;
+}
+.event-type-speaker .event-dot {
+  background-color: #17a2b8;
+}
+
+.event-type-test {
+  border-left-color: #6c757d;
+}
+.event-type-test .event-dot {
+  background-color: #6c757d;
+}
+
+/* Events List */
+.trent-events-list {
+  margin-top: 60px;
+  position: relative;
+}
+
+.events-list-title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #004b23;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.events-list-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, #004b23, #38b000);
+}
+
+.events-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.trent-event-card {
+  background: #fff;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.trent-event-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.trent-event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #004b23, #38b000);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.trent-event-card:hover::before {
+  transform: scaleX(1);
+}
+
+.event-card-image {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.trent-event-card:hover .event-card-image img {
+  transform: scale(1.1);
+}
+
+.event-card-placeholder {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #e6e6e6 25%, #f0f0f0 25%, #f0f0f0 50%, #e6e6e6 50%, #e6e6e6 75%, #f0f0f0 75%);
+  background-size: 20px 20px;
+  animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+.event-type-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0,75,35,0.9);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s;
+}
+
+.trent-event-card:hover .event-type-badge {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.event-type-badge.networking {
+  background: rgba(40,167,69,0.9);
+}
+
+.event-type-badge.workshop {
+  background: rgba(255,193,7,0.9);
+  color: #333;
+}
+
+.event-type-badge.speaker {
+  background: rgba(23,162,184,0.9);
+}
+
+.event-type-badge.test {
+  background: rgba(108,117,125,0.9);
+}
+
+/* Card Content */
+.event-card-content {
+  padding: 20px;
+}
+
+.event-card-content h4 {
+  margin-bottom: 15px;
+  color: #004b23;
+  font-size: 1.75rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.trent-event-card:hover .event-card-content h4 {
+  color: #38b000;
+}
+
+.event-date, .event-location {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.event-date i, .event-location i {
+  margin-right: 8px;
+  color: #004b23;
+}
+
+/* Modal Styles */
+.trent-event-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.fade-in {
+  animation: fadeInModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.fade-out {
+  animation: fadeOutModal 0.3s ease-out forwards;
+}
+
+.trent-event-modal-content {
+  background: #fff;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-in {
+  animation: slideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+.trent-event-modal-banner {
+  position: relative;
+  height: 250px;
+  min-height: 150px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Add custom scrollbar styling for the modal */
+.trent-event-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.trent-event-modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.trent-event-modal-content::-webkit-scrollbar-thumb {
+  background: #004b23;
+  border-radius: 10px;
+}
+
+.trent-event-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #38b000;
+}
+
+.slide-in {
+  animation: slideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+.trent-event-modal-banner {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.trent-event-modal-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  z-index: 1;
+}
+
+.trent-event-modal-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  filter: brightness(1.05);
+}
+
+.trent-event-modal-content:hover .trent-event-modal-banner img {
+  transform: scale(1.05);
+}
+
+/* Enhanced gallery styling */
+.event-gallery {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.event-gallery strong {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #004b23;
+  position: relative;
+  padding-left: 15px;
+}
+
+.event-gallery strong::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 20px;
+  background: linear-gradient(to bottom, #004b23, #38b000);
+  border-radius: 3px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.gallery-image-wrapper {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.gallery-image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.gallery-image-wrapper:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.gallery-image-wrapper:hover::after {
+  opacity: 1;
+}
+
+.gallery-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-image-wrapper:hover img {
+  transform: scale(1.08);
+}
+
+/* Responsive adjustments for modal and gallery */
+@media (max-width: 768px) {
+  .trent-event-modal-content {
+    width: 95%;
+    max-height: 90vh;
   }
   
-  .section-title h2 {
-    color: #00563F; /* Trent Green */
-    margin-bottom: 15px;
-    font-size: 2.5rem;
-    font-weight: 700;
+  .trent-event-modal-banner {
+    height: 180px;
   }
   
-  .text-center {
-    text-align: center;
-  }
-  
-  .events-count {
-    color: #666;
-    font-size: 1.1rem;
-    margin-top: 10px;
-  }
-  
-  .trent-calendar-container {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 1000px;
-    animation: slideUp 0.6s ease-out;
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .trent-calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  
-  .trent-calendar-header h3 {
-    color: #00563F; /* Trent Green */
-    font-size: 1.8rem;
-    margin: 0;
-    font-weight: 600;
-  }
-  
-  .trent-calendar-nav {
-    background: #00563F;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .trent-calendar-nav:hover {
-    background: #003D2C;
-    transform: scale(1.1);
-  }
-  
-  .trent-calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
   }
+}
+
+@media (max-width: 576px) {
+  .trent-event-modal-content {
+    width: 98%;
+    max-height: 95vh;
+  }
   
-  .trent-calendar-day-header {
-    text-align: center;
-    font-weight: bold;
-    color: #00563F;
-    padding: 10px;
+  .trent-event-modal-banner {
+    height: 150px;
+  }
+  
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+  
+  .event-gallery strong {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+.trent-calendar-header h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.trent-calendar-nav {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.trent-calendar-nav:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+.nav-icon {
+  display: block;
+  line-height: 1;
+}
+
+/* Calendar Grid */
+.trent-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background-color: #f0f0f0;
+  padding: 2px;
+}
+
+.trent-calendar-day-header {
+  background-color: #e9ecef;
+  padding: 12px 0;
+  text-align: center;
+  font-weight: 600;
+  color: #004b23;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.trent-calendar-day {
+  min-height: 100px;
+  padding: 8px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s;
+  border: 1px solid #eee;
+}
+
+.trent-calendar-day:hover {
+  background: #f9fcf7;
+  transform: scale(1.02);
+  z-index: 5;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.trent-calendar-day.empty {
+  background-color: #f9f9f9;
+  border: none;
+}
+
+.trent-calendar-day.today {
+  background-color: #e8f5e9;
+  border: 2px solid #004b23;
+}
+
+/* Day Number */
+.day-number {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.today .day-number {
+  background: #004b23;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Event Indicators */
+.trent-event-indicators {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trent-event-indicator {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  background-color: #f0f7ff;
+  border-left: 3px solid #004b23;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #000000;
+}
+
+.trent-event-indicator:hover {
+  background-color: #e0f0ff;
+  transform: translateX(3px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #004b23;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.trent-event-indicator .event-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Event Type Colors */
+.event-type-networking {
+  border-left-color: #28a745;
+}
+.event-type-networking .event-dot {
+  background-color: #28a745;
+}
+
+.event-type-workshop {
+  border-left-color: #ffc107;
+}
+.event-type-workshop .event-dot {
+  background-color: #ffc107;
+}
+
+.event-type-speaker {
+  border-left-color: #17a2b8;
+}
+.event-type-speaker .event-dot {
+  background-color: #17a2b8;
+}
+
+.event-type-test {
+  border-left-color: #6c757d;
+}
+.event-type-test .event-dot {
+  background-color: #6c757d;
+}
+
+/* Events List */
+.trent-events-list {
+  margin-top: 60px;
+  position: relative;
+}
+
+.events-list-title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #004b23;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.events-list-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, #004b23, #38b000);
+}
+
+.events-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.trent-event-card {
+  background: #fff;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.trent-event-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.trent-event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #004b23, #38b000);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.trent-event-card:hover::before {
+  transform: scaleX(1);
+}
+
+.event-card-image {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.trent-event-card:hover .event-card-image img {
+  transform: scale(1.1);
+}
+
+.event-card-placeholder {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #e6e6e6 25%, #f0f0f0 25%, #f0f0f0 50%, #e6e6e6 50%, #e6e6e6 75%, #f0f0f0 75%);
+  background-size: 20px 20px;
+  animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+.event-type-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0,75,35,0.9);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s;
+}
+
+.trent-event-card:hover .event-type-badge {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.event-type-badge.networking {
+  background: rgba(40,167,69,0.9);
+}
+
+.event-type-badge.workshop {
+  background: rgba(255,193,7,0.9);
+  color: #333;
+}
+
+.event-type-badge.speaker {
+  background: rgba(23,162,184,0.9);
+}
+
+.event-type-badge.test {
+  background: rgba(108,117,125,0.9);
+}
+
+/* Card Content */
+.event-card-content {
+  padding: 20px;
+}
+
+.event-card-content h4 {
+  margin-bottom: 15px;
+  color: #004b23;
+  font-size: 1.75rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.trent-event-card:hover .event-card-content h4 {
+  color: #38b000;
+}
+
+.event-date, .event-location {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.event-date i, .event-location i {
+  margin-right: 8px;
+  color: #004b23;
+}
+
+/* Modal Styles */
+.trent-event-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.fade-in {
+  animation: fadeInModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.fade-out {
+  animation: fadeOutModal 0.3s ease-out forwards;
+}
+
+.trent-event-modal-content {
+  background: #fff;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-in {
+  animation: slideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+.trent-event-modal-banner {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.trent-event-modal-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.trent-event-modal-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+
+.trent-event-modal-content:hover .trent-event-modal-banner img {
+  transform: scale(1.05);
+}
+
+.trent-event-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: #fff;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.trent-event-modal-close:hover {
+  background: rgba(0,0,0,0.5);
+  transform: rotate(90deg);
+}
+
+.trent-event-modal-header {
+  padding: 25px 25px 15px;
+  position: relative;
+}
+
+.trent-event-modal-header h3 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.trent-event-modal-header .event-type-badge {
+  position: static;
+  display: inline-block;
+  background: #004b23;
+  font-size: 0.9rem;
+  padding: 6px 15px;
+}
+
+.trent-event-modal-body {
+  padding: 15px 25px 25px;
+  color: #000000;
+}
+
+.trent-event-modal-body p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.trent-event-modal-body strong {
+  color: #004b23;
+  font-weight: 600;
+}
+
+.event-description {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+}
+
+.event-description strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.event-description p {
+  text-align: justify;
+}
+
+.trent-event-modal-footer {
+  padding: 20px 25px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  text-align: right;
+}
+
+.trent-event-register-btn {
+  background: linear-gradient(to right, #004b23, #38b000);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0,75,35,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.trent-event-register-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.trent-event-register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,75,35,0.3);
+}
+
+.trent-event-register-btn:hover::before {
+  left: 100%;
+}
+
+/* Additional Animations */
+@keyframes floatUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOutModal {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(30px); opacity: 0; }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-title h2 {
+    font-size: 2.4rem;
   }
   
   .trent-calendar-day {
-    aspect-ratio: 1;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 10px;
-    position: relative;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trent-events-section {
+    padding: 40px 15px;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .section-title p {
+    font-size: 1rem;
+  }
+  
+  .trent-calendar-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .trent-calendar-day {
+    min-height: 70px;
+    padding: 5px;
+  }
+  
+  .trent-calendar-day-header {
+    padding: 8px 0;
+    font-size: 0.8rem;
+  }
+  
+  .day-number {
+    font-size: 0.8rem;
+  }
+  
+  .trent-event-indicator {
+    padding: 3px 5px;
+  }
+  
+  .trent-event-indicator .event-title {
+    display: none;
+  }
+  
+  .events-list-title {
+    font-size: 1.6rem;
+  }
+  
+  .trent-event-modal-banner {
+    height: 180px;
+  }
+  
+  .trent-event-modal-header h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .trent-calendar-container {
+    margin-bottom: 30px;
+  }
+  
+  .trent-calendar-header {
+    padding: 12px 15px;
+  }
+  
+  .trent-calendar-nav {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .trent-calendar-day {
     min-height: 50px;
   }
   
   .trent-calendar-day:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 86, 63, 0.1);
-    background-color: #f8fefa;
-  }
-  
-  .today {
-    background-color: rgba(0, 86, 63, 0.1);
-    font-weight: bold;
-    border: 2px solid #00563F;
-  }
-  
-  .day-number {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    color: #333;
-    font-weight: 500;
-  }
-  
-  .has-event {
-    background: rgba(0, 86, 63, 0.05);
-  }
-  
-  .trent-event-indicator {
-    width: 10px;
-    height: 10px;
-    background: #00563F;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    cursor: pointer;
-    z-index: 5;
-  }
-  
-  .trent-multiple-events {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    background: #00563F;
-    color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    font-size: 0.7rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 5;
-  }
-  
-  .event-tooltip {
-    position: absolute;
-    bottom: 100%;
-    right: -10px;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-    width: 220px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 100;
-    pointer-events: none;
-  }
-  
-  .trent-event-indicator:hover .event-tooltip,
-  .trent-multiple-events:hover .event-tooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-10px);
-  }
-  
-  .event-tooltip h4 {
-    color: #00563F;
-    margin: 0 0 5px 0;
-    font-size: 1rem;
-  }
-  
-  .event-tooltip p {
-    color: #666;
-    margin: 0;
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-  
-  .empty {
-    background: #f8f9fa;
-    cursor: default;
-  }
-  
-  .empty:hover {
     transform: none;
-    box-shadow: none;
   }
   
-  /* Mobile-friendly upcoming events list */
-  .upcoming-events-mobile {
-    display: none;
-    margin-top: 40px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-  }
-  
-  .upcoming-events-mobile h3 {
-    color: #00563F;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-  
-  .events-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .event-card {
-    display: flex;
-    background: #f9f9f9;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .event-date {
-    background: #00563F;
-    color: white;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 80px;
-  }
-  
-  .event-date .day {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .event-date .month {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-  }
-  
-  .event-details {
-    padding: 15px;
-    flex-grow: 1;
-  }
-  
-  .event-details h4 {
-    margin: 0 0 5px 0;
-    color: #00563F;
-    font-size: 1.1rem;
-  }
-  
-  .event-time,
-  .event-location {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  .no-events {
-    color: #999;
-    font-style: italic;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  /* Modal styles */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    padding: 20px;
-    animation: fadeIn 0.3s ease-out;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  .event-modal {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
+  .trent-event-card {
     width: 100%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
+  }
+  
+  .trent-event-modal-content {
+    width: 95%;
     max-height: 90vh;
-    animation: zoomIn 0.3s ease-out;
-    position: relative;
+    border-radius: 10px;
   }
   
-  @keyframes zoomIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+  .trent-event-modal-banner {
+    height: 150px;
   }
   
-  .modal-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    transition: all 0.2s ease;
+  .trent-event-modal-header {
+    padding: 15px 15px 10px;
   }
   
-  .modal-close:hover {
-    background: rgba(0, 0, 0, 0.8);
-    transform: scale(1.1);
+  .trent-event-modal-header h3 {
+    font-size: 1.4rem;
   }
   
-  .modal-image {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+  .trent-event-modal-body {
+    padding: 10px 15px 15px;
   }
   
-  .modal-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .modal-content {
-    padding: 30px;
-    overflow-y: auto;
-  }
-  
-  .event-type {
-    display: inline-block;
-    background: #00563F;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 30px;
-    margin-bottom: 15px;
-  }
-  
-  .event-modal h2 {
-    color: #00563F;
-    margin: 0 0 20px 0;
-    font-size: 1.8rem;
-  }
-  
-  .event-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 25px;
-  }
-  
-  .meta-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #555;
+  .trent-event-modal-body p {
     font-size: 0.95rem;
   }
   
-  .meta-item i {
-    font-size: 1.2rem;
+  .trent-event-modal-footer {
+    padding: 15px;
   }
   
-  .event-description {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 30px;
+  .trent-event-register-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .trent-events-section {
+    background: white;
+    padding: 20px 0;
   }
   
-  .register-button {
-    background: #00563F;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  .trent-calendar-container,
+  .trent-event-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
   }
   
-  .register-button:hover {
-    background: #003D2C;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 86, 63, 0.2);
+  .trent-calendar-header {
+    background: #f0f0f0;
+    color: #000;
   }
   
-  /* Responsive styles */
-  @media (max-width: 992px) {
-    .trent-calendar-container {
-      padding: 20px;
-    }
-    
-    .trent-calendar-header h3 {
-      font-size: 1.5rem;
-    }
+  .trent-calendar-nav {
+    display: none;
   }
   
-  @media (max-width: 768px) {
-    .trent-events-section {
-      padding: 60px 0;
-    }
-    
-    .section-title h2 {
-      font-size: 2rem;
-    }
-    
-    .trent-calendar-container {
-      padding: 15px;
-      margin: 10px auto;
-    }
-    
-    .trent-calendar-grid {
-      gap: 5px;
-    }
-    
-    .trent-calendar-day {
-      padding: 5px;
-    }
-    
-    .trent-calendar-day-header {
-      font-size: 0.8rem;
-      padding: 5px;
-    }
-    
-    .day-number {
-      font-size: 0.9rem;
-    }
-    
-    .event-modal {
-      flex-direction: column;
-    }
-    
-    .modal-image {
-      height: 200px;
-    }
-    
-    .modal-content {
-      padding: 20px;
-    }
-    
-    .event-meta {
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .upcoming-events-mobile {
-      display: block;
-    }
+  .event-type-badge {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border: 1px solid #ddd;
   }
   
-  @media (max-width: 576px) {
-    .trent-events-section {
-      padding: 40px 0;
-    }
-    
-    .section-title h2 {
-      font-size: 1.8rem;
-    }
-    
-    .trent-calendar-container {
-      display: none; /* Hide calendar on very small screens */
-    }
-    
-    .event-modal h2 {
-      font-size: 1.5rem;
-    }
-    
-    .register-button {
-      width: 100%;
-    }
+  .trent-event-register-btn {
+    background: #f0f0f0;
+    color: #000;
+    border: 1px solid #ddd;
+    box-shadow: none;
   }
+}

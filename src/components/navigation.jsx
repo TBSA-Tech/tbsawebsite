@@ -28,9 +28,10 @@ export const Navigation = (props) => {
             <div id="mainListDiv" className="nav-menu">
                 <ul className="nav-links-list">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#services">Events</a></li>
+                    <li><a href="#portfolio">Gallery</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <span className="nav-trigger">

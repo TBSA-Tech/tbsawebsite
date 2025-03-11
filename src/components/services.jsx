@@ -2,32 +2,199 @@ import React, { useState, useEffect } from "react";
 import "./services.css";
 
 export const Services = () => {
-  const [currentMonth, setCurrentMonth] = useState(new Date());
+  // Start the calendar on March 2025 so you see events right away.
+  // You can revert to new Date() if you want to start at the current date.
+  const [currentMonth, setCurrentMonth] = useState(new Date(2025, 2, 1)); // March 2025
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [animatingOut, setAnimatingOut] = useState(false);
 
+  // Updated events with dates across multiple months
   const events = [
+    // January 2025 Events
     {
-      date: "2024-02-15",
-      title: "Business Network Night",
+      date: "2025-01-17",
+      title: "RBC Future Launch",
       type: "Networking",
       location: "Trent Student Centre",
-      time: "6:00 PM - 8:00 PM"
+      time: "7:00 PM - 9:00 PM",
+      description:
+        "The Trent Business Students Association hosted their first event of the semester in collaboration with RBC Future Champs, showcasing essential career development strategies. Attendees learned valuable LinkedIn optimization techniques, resume best practices, and practical approaches to fraud prevention.",
+      bannerImage:
+        "img/events/rbc_banner.jpeg",
+      galleryImages: [
+        "img/events/rbc_banner.jpeg",
+        "img/events/rbc_pic1.jpeg",
+        "img/events/rbc_pic2.jpeg",
+      ]
     },
     {
-      date: "2024-01-20",
-      title: "Case Competition Workshop",
+      date: "2025-01-31",
+      title: "Company Crawl",
+      type: "Networking",
+      location: "Peterborough, Ontario",
+      time: "11:00 AM - 3:00 PM",
+      description:
+        "The Trent Business Students Association (TBSA) hosted a company crawl, where students explored five local businesses in downtown Peterborough. The event provided valuable networking opportunities, allowing participants to engage with business owners and gain insights into different industries.",
+      bannerImage:
+        "img/events/CC_crawl-banner.jpeg",
+      galleryImages: [
+        "img/events/CC-4.jpeg",
+        "img/events/CC-3.jpeg",
+        "img/events/CC-2.jpeg",
+        "img/events/CC-6.jpeg",
+        "img/events/CC-5.jpeg",
+        "img/events/CC-7.jpeg",
+      ]
+    },
+    {
+      date: "2025-01-20",
+      title: "The Trentpreneur Radio Show",
       type: "Workshop",
-      location: "Bata Library",
-      time: "2:00 PM - 4:00 PM"
+      location: "Peterborough, Ontario",
+      time: "11:00 AM - 3:00 PM",
+      description:
+        "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
+      bannerImage:
+        "img/events/CC_crawl-banner.jpeg",
+      galleryImages: [
+        "img/events/CC-4.jpeg",
+        "img/events/CC-3.jpeg",
+        "img/events/CC-2.jpeg",
+        "img/events/CC-6.jpeg",
+        "img/events/CC-5.jpeg",
+        "img/events/CC-7.jpeg",
+      ]
     },
     {
-      date: "2024-01-25",
-      title: "Alumni Speaker Series",
-      type: "Speaker",
-      location: "Gzowski College",
-      time: "5:30 PM - 7:00 PM"
+      date: "2025-01-27",
+      title: "The Trentpreneur Radio Show",
+      type: "Workshop",
+      location: "Peterborough, Ontario",
+      time: "11:00 AM - 3:00 PM",
+      description:
+        "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
+      bannerImage:
+        "img/events/CC_crawl-banner.jpeg",
+      galleryImages: [
+        "img/events/CC-4.jpeg",
+        "img/events/CC-3.jpeg",
+        "img/events/CC-2.jpeg",
+        "img/events/CC-6.jpeg",
+        "img/events/CC-5.jpeg",
+        "img/events/CC-7.jpeg",
+      ]
+    },
+    // February 2025 Events
+    {
+      date: "2025-02-03",
+      title: "The Trentpreneur Radio Show",
+      type: "Workshop",
+      location: "Peterborough, Ontario",
+      time: "11:00 AM - 3:00 PM",
+      description:
+        "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
+      bannerImage:
+        "img/events/CC_crawl-banner.jpeg",
+      galleryImages: [
+        "img/events/CC-4.jpeg",
+        "img/events/CC-3.jpeg",
+        "img/events/CC-2.jpeg",
+        "img/events/CC-6.jpeg",
+        "img/events/CC-5.jpeg",
+        "img/events/CC-7.jpeg",
+      ]
+    },
+    {
+      date: "2025-02-10",
+      title: "The Trentpreneur Radio Show",
+      type: "Workshop",
+      location: "Peterborough, Ontario",
+      time: "11:00 AM - 3:00 PM",
+      description:
+        "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
+      bannerImage:
+        "img/events/CC_crawl-banner.jpeg",
+      galleryImages: [
+        "img/events/CC-4.jpeg",
+        "img/events/CC-3.jpeg",
+        "img/events/CC-2.jpeg",
+        "img/events/CC-6.jpeg",
+        "img/events/CC-5.jpeg",
+        "img/events/CC-7.jpeg",
+      ]
+    },
+    {
+      date: "2025-02-17",
+      title: "The Trentpreneur Radio Show",
+      type: "Workshop",
+      location: "Peterborough, Ontario",
+      time: "11:00 AM - 3:00 PM",
+      description:
+        "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
+      bannerImage:
+        "img/events/CC_crawl-banner.jpeg",
+      galleryImages: [
+        "img/events/CC-4.jpeg",
+        "img/events/CC-3.jpeg",
+        "img/events/CC-2.jpeg",
+        "img/events/CC-6.jpeg",
+        "img/events/CC-5.jpeg",
+        "img/events/CC-7.jpeg",
+      ]
+    },
+    {
+      date: "2025-02-24",
+      title: "The Trentpreneur Radio Show",
+      type: "Workshop",
+      location: "Peterborough, Ontario",
+      time: "11:00 AM - 3:00 PM",
+      description:
+        "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
+      bannerImage:
+        "img/events/CC_crawl-banner.jpeg",
+      galleryImages: [
+        "img/events/CC-4.jpeg",
+        "img/events/CC-3.jpeg",
+        "img/events/CC-2.jpeg",
+        "img/events/CC-6.jpeg",
+        "img/events/CC-5.jpeg",
+        "img/events/CC-7.jpeg",
+      ]
+    },
+    {
+      date: "2025-02-15",
+      title: "Building Bridges Gala",
+      type: "Networking",
+      location: "Canoe Museum, Peterborough, Ontario",
+      time: "7:00 PM - 9:00 PM",
+      description:
+        "The Trent Business Students Association hosted the Building Bridges Business Gala at the stunning Canadian Canoe Museum, providing a sophisticated and historic setting for an evening of networking and celebration. Attendees enjoyed fine dining, live music, and meaningful connections with students, professors, and industry professionals.",
+      bannerImage:
+        "img/events/BB-banner.jpeg",
+      galleryImages: [
+        "img/events/BB-3.jpeg",
+        "img/events/BB-2.jpeg",
+        "img/events/BB-5.jpeg",
+        "img/events/BB-4.jpeg",
+      ]
+    },
+
+    // March 2025 Events
+    {
+      date: "2025-03-03",
+      title: "Trent Business Club Kickoff",
+      type: "Competation",
+      location: "Trent Student Centre",
+      time: "6:00 PM - 8:00 PM",
+      description:
+        "Kick off the new year with our first official networking event. Meet fellow students and local entrepreneurs.",
+      bannerImage:
+        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     }
   ];
 
+  // Helper to get the number of days and first day of the month
   const getDaysInMonth = (date) => {
     const year = date.getFullYear();
     const month = date.getMonth();
@@ -36,13 +203,111 @@ export const Services = () => {
     return { days, firstDay };
   };
 
+  const handleEventClick = (event) => {
+    setSelectedEvent(event);
+    setShowModal(true);
+    setAnimatingOut(false);
+  };
+
+  const closeModal = () => {
+    setAnimatingOut(true);
+    setTimeout(() => {
+      setShowModal(false);
+      setSelectedEvent(null);
+      setAnimatingOut(false);
+    }, 300);
+  };
+
+  // Compare using string formatting to avoid timezone issues
+  const isDateInMonth = (dateString, monthDate) => {
+    const [year, month] = dateString.split("-").map(Number);
+    // month - 1 because JS Date months are 0-based
+    return year === monthDate.getFullYear() && month - 1 === monthDate.getMonth();
+  };
+
+  // Compare the event's date with today's date
+  const isPastEvent = (eventDate) => {
+    const now = new Date();
+    const eDate = new Date(eventDate);
+    return eDate < now; 
+  };
+
+  const debugEvents = () => {
+    console.log("Current Month:", currentMonth.getMonth(), currentMonth.getFullYear());
+    console.log("Month Navigation Working:", true);
+    events.forEach((event) => {
+      console.log("Event:", event.title, "Date:", event.date);
+    });
+  };
+
+  useEffect(() => {
+    debugEvents();
+  }, [currentMonth]);
+
   const changeMonth = (offset) => {
+    console.log("Changing month with offset:", offset);
     const newDate = new Date(currentMonth);
     newDate.setMonth(newDate.getMonth() + offset);
     setCurrentMonth(newDate);
   };
 
   const { days, firstDay } = getDaysInMonth(currentMonth);
+
+  // Generate calendar days array
+  const calendarDays = [];
+
+  // Empty cells for days before the first day of the month
+  for (let i = 0; i < firstDay; i++) {
+    calendarDays.push(
+      <div key={`empty-${i}`} className="trent-calendar-day empty"></div>
+    );
+  }
+
+  // Days of the month with formatted date string matching the event date
+  for (let i = 1; i <= days; i++) {
+    const formattedDate = `${currentMonth.getFullYear()}-${(currentMonth.getMonth() + 1)
+      .toString()
+      .padStart(2, "0")}-${i.toString().padStart(2, "0")}`;
+
+    const dayEvents = events.filter((event) => event.date === formattedDate);
+    const hasEvents = dayEvents.length > 0;
+    const currentDate = new Date(
+      currentMonth.getFullYear(),
+      currentMonth.getMonth(),
+      i
+    );
+    const isToday = new Date().toDateString() === currentDate.toDateString();
+
+    calendarDays.push(
+      <div
+        key={i}
+        className={`trent-calendar-day ${hasEvents ? "has-event" : ""} ${
+          isToday ? "today" : ""
+        }`}
+      >
+        <span className="day-number">{i}</span>
+        {hasEvents && (
+          <div className="trent-event-indicators">
+            {dayEvents.map((event, index) => (
+              <div
+                key={index}
+                className={`trent-event-indicator event-type-${event.type.toLowerCase()}`}
+                onClick={() => handleEventClick(event)}
+              >
+                <span className="event-dot"></span>
+                <span className="event-title">{event.title}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // List view for events in the current month
+  const currentMonthEvents = events.filter((event) =>
+    isDateInMonth(event.date, currentMonth)
+  );
 
   return (
     <div id="services" className="trent-events-section">
@@ -54,68 +319,171 @@ export const Services = () => {
 
         <div className="trent-calendar-container">
           <div className="trent-calendar-header">
-            <button 
-              className="trent-calendar-nav" 
+            <button
+              className="trent-calendar-nav"
               onClick={() => changeMonth(-1)}
+              aria-label="Previous month"
             >
-              &#8249;
+              <span className="nav-icon">&#8249;</span>
             </button>
             <h3>
-              {currentMonth.toLocaleString('default', { 
-                month: 'long', 
-                year: 'numeric' 
+              {currentMonth.toLocaleString("default", {
+                month: "long",
+                year: "numeric",
               })}
             </h3>
-            <button 
-              className="trent-calendar-nav" 
+            <button
+              className="trent-calendar-nav"
               onClick={() => changeMonth(1)}
+              aria-label="Next month"
             >
-              &#8250;
+              <span className="nav-icon">&#8250;</span>
             </button>
           </div>
 
           <div className="trent-calendar-grid">
-            {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
               <div key={day} className="trent-calendar-day-header">
                 {day}
               </div>
             ))}
-            
-            {[...Array(firstDay)].map((_, i) => (
-              <div key={`empty-${i}`} className="trent-calendar-day empty"></div>
-            ))}
 
-            {[...Array(days)].map((_, i) => (
-              <div 
-                key={i + 1} 
-                className={`trent-calendar-day ${
-                  events.some(event => 
-                    new Date(event.date).getDate() === (i + 1) &&
-                    new Date(event.date).getMonth() === currentMonth.getMonth()
-                  ) ? 'has-event' : ''
-                }`}
-              >
-                <span className="day-number">{i + 1}</span>
-                {events
-                  .filter(event => 
-                    new Date(event.date).getDate() === (i + 1) &&
-                    new Date(event.date).getMonth() === currentMonth.getMonth()
-                  )
-                  .map((event, index) => (
-                    <div key={index} className="trent-event-indicator">
-                      <div className="event-tooltip">
-                        <h4>{event.title}</h4>
-                        <p>{event.time}</p>
-                        <p>{event.location}</p>
-                      </div>
-                    </div>
-                  ))
-                }
-              </div>
-            ))}
+            {calendarDays}
           </div>
         </div>
+
+        {/* Month Events List View */}
+        {currentMonthEvents.length > 0 ? (
+          <div className="trent-events-list">
+            <h3 className="events-list-title">
+              Events in{" "}
+              {currentMonth.toLocaleString("default", {
+                month: "long",
+                year: "numeric",
+              })}
+            </h3>
+            <div className="events-list-container">
+              {currentMonthEvents.map((event, index) => (
+                <div
+                  key={index}
+                  className="trent-event-card"
+                  onClick={() => handleEventClick(event)}
+                >
+                  <div className="event-card-image">
+                    {event.bannerImage ? (
+                      <img src={event.bannerImage} alt={event.title} />
+                    ) : (
+                      <div className="event-card-placeholder"></div>
+                    )}
+                    <span
+                      className={`event-type-badge ${event.type.toLowerCase()}`}
+                    >
+                      {event.type}
+                    </span>
+                  </div>
+                  <div className="event-card-content">
+                    <h4>{event.title}</h4>
+                    <p className="event-date">
+                      <i className="fa fa-calendar"></i>{" "}
+                      {new Date(event.date).toLocaleDateString()}
+                    </p>
+                    <p className="event-location">
+                      <i className="fa fa-map-marker"></i> {event.location}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          // Renders only one "No events" block if there are no events in the month
+          <div className="trent-no-events">
+            <h3 className="no-events-title">
+              No events scheduled for{" "}
+              {currentMonth.toLocaleString("default", {
+                month: "long",
+                year: "numeric",
+              })}
+            </h3>
+            <p>Check other months or check back later for updates.</p>
+          </div>
+        )}
+
+        {/* Event Details Modal */}
+        {showModal && selectedEvent && (
+          <div
+            className={`trent-event-modal-overlay ${
+              animatingOut ? "fade-out" : "fade-in"
+            }`}
+            onClick={closeModal}
+          >
+            <div
+              className={`trent-event-modal-content ${
+                animatingOut ? "slide-out" : "slide-in"
+              }`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {selectedEvent.bannerImage && (
+                <div className="trent-event-modal-banner">
+                  <img src={selectedEvent.bannerImage} alt={selectedEvent.title} />
+                </div>
+              )}
+              <span className="trent-event-modal-close" onClick={closeModal}>
+                &times;
+              </span>
+              <div className="trent-event-modal-header">
+                <h3>{selectedEvent.title}</h3>
+                <span
+                  className={`event-type-badge ${selectedEvent.type.toLowerCase()}`}
+                >
+                  {selectedEvent.type}
+                </span>
+              </div>
+              <div className="trent-event-modal-body">
+                <p>
+                  <strong>Date:</strong>{" "}
+                  {new Date(selectedEvent.date).toLocaleDateString()}
+                </p>
+                <p>
+                  <strong>Time:</strong> {selectedEvent.time}
+                </p>
+                <p>
+                  <strong>Location:</strong> {selectedEvent.location}
+                </p>
+                <div className="event-description">
+                  <strong>Description:</strong>
+                  <p>{selectedEvent.description}</p>
+                </div>
+
+                {/* Conditionally render a gallery for past events if images exist */}
+                {isPastEvent(selectedEvent.date) && selectedEvent.galleryImages?.length > 0 && (
+                  <div className="event-gallery">
+                    <strong>Event Gallery:</strong>
+                    <div className="gallery-container">
+                      {selectedEvent.galleryImages.map((imgUrl, idx) => (
+                        <div key={idx} className="gallery-image-wrapper">
+                          <img src={imgUrl} alt={`Gallery image ${idx + 1}`} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+              </div>
+
+              {/* For future events, we keep "Register Now" button. 
+                  You could also conditionally hide or show this button depending on your needs. */}
+              {!isPastEvent(selectedEvent.date) && (
+                <div className="trent-event-modal-footer">
+                  <button className="trent-event-register-btn">Register Now</button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 };
+
+export default Services;

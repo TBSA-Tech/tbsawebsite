@@ -4,18 +4,17 @@
     "paragraph": "Trent Business Stuent's association is a student run levy-group at Trent University which is catered to the business majors at Trent University"
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Since 1998, the Trent Business Students Association (TBSA) has connected academic learning with real-world business experiences at Trent University. We empower future business leaders by creating opportunities beyond the classroom for students to develop leadership skills, build professional networks, and explore various business disciplines. TBSA has established strong relationships with industry professionals, alumni, and faculty, providing students with mentorship and career connections. We're committed to building a vibrant community where students form lasting relationships and discover new opportunities. As the voice of business students at Trent, we continuously adapt to meet the evolving needs of the business landscape, creating pathways for students to achieve their goals and turn ambitions into reality.", 
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Business Case Competitions",
+      "Professional Networking",
+      "Industry Engagement",
+      "Student Development"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Career Development",
+      "Community",
+      "Collaboration & Collaboration"
     ]
   },
   "Gallery": [
@@ -131,29 +130,105 @@
   ],
   "Team": [
     {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "img": "img/team/Riya_Pres.JPG",
+      "name": "Riya Jaykar",
+      "job": "President",
+      "department": "Executive Board"
     },
     {
-      "img": "img/team/02.jpg",
+      "img": "img/team/Yash_VP.JPG",
       "name": "Mike Doe",
-      "job": "Senior Designer"
+      "job": "Vice President",
+      "department": "Executive Board"
     },
     {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
+      "img": "img/team/YugadNagra.JPG",
+      "name": "Yugad Nagra",
+      "job": "VP Finance",
+      "department": "Finance"
     },
     {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "img": "img/team/Jereni_Finance.JPG",
+      "name": "Jereni",
+      "job": "Finance Associate",
+      "department": "Finance"
+    },
+    {
+      "img": "img/team/DhanNagra.JPG",
+      "name": "Dhan Nagra",
+      "job": "VP Marketing",
+      "department": "Marketing"
+    },
+    {
+      "img": "img/team/HarishGopal.JPG",
+      "name": "Harish Gopal",
+      "job": "Marketing Associate",
+      "department": "Marketing"
+    },
+    {
+      "img": "img/team/ParinPatel.JPG",
+      "name": "Parin Patel",
+      "job": "VP Of Corporate Affairs",
+      "department": "Corporate Affairs"
+    },
+    {
+      "img": "img/team/Almeena.JPG",
+      "name": "Almeena Manal",
+      "job": "Corporate Affairs Associate",
+      "department": "Corporate Affairs"
+    },
+    {
+      "img": "img/team/Joylyn.JPG",
+      "name": "Joylyn D'Souza",
+      "job": "VP Communications and Outreach Associate",
+      "department": "Communications"
+    },
+    {
+      "img": "img/team/Zainab Ahsan Chiya_.JPG",
+      "name": "Zainab Ahsan Chiya",
+      "job": "Communications and Outreach Associate",
+      "department": "Communications"
+    },
+    {
+      "img": "img/team/Hitika.JPG",
+      "name": "Hitika Somani",
+      "job": "VP Conferences Case-Competitions",
+      "department": "Events"
+    },
+    {
+      "img": "img/team/Dami.JPG",
+      "name": "Dami",
+      "job": "VP Of Human Resources",
+      "department": "Human Resources"
+    },
+    {
+      "img": "img/team/Vivian.PNG",
+      "name": "Vivian",
+      "job": "3rd Year Representative",
+      "department": "Student Representatives"
+    },
+    {
+      "img": "img/team/Mitanshu.JPG",
+      "name": "Mitanshu",
+      "job": "2nd Year Representative",
+      "department": "Student Representatives"
+    },
+    {
+      "img": "img/team/Dhvani_First year rep.JPG",
+      "name": "Dhvani Parmar",
+      "job": "1st Year Representative",
+      "department": "Student Representatives"
+    },
+    {
+      "img": "img/team/Sameer_Secretary.jpeg",
+      "name": "Sameer Ahmed",
+      "job": "Secretary",
+      "department": "Student Representatives"
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
+    "address": "1600 W Bank Dr, Peterborough, ON K9L 0G2",
+    "phone": "+1 (888) 888-8888",
     "email": "info@company.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
