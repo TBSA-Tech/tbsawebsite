@@ -22,22 +22,22 @@ export const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Thompson",
+      name: "Riya Girish Jaykar",
       position: "4th Year BBA Student",
       text: "Being part of the Trent Business Students' Association has opened countless doors for me. The networking events and case competitions helped me secure my dream internship!",
-      img: "img/team/01.jpg",
+      img: "img/testimonials/riya.jpeg",
     },
     {
-      name: "Michael Chen",
+      name: "Yash ",
       position: "Alumni, Class of 2022",
       text: "TBSA provided me with leadership opportunities that set me apart in job interviews. The mentorship program was invaluable for my professional development.",
-      img: "img/team/02.jpg",
+      img: "img/team/Yash_VP.JPG",
     },
     {
-      name: "Emily Rodriguez",
-      position: "Marketing Director, TBSA",
+      name: "Mitanshu",
+      position: "Alumni, Class of 2022",
       text: "Leading marketing initiatives for TBSA has given me real-world experience that perfectly complements my business degree. The supportive community here is unmatched!",
-      img: "img/team/03.jpg",
+      img: "img/team/Mitanshu.JPG",
     },
   ];
 

@@ -56,14 +56,10 @@ export const Services = () => {
       description:
         "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
       bannerImage:
-        "img/events/CC_crawl-banner.jpeg",
+        "img/events/radioShow-2.jpeg",
       galleryImages: [
-        "img/events/CC-4.jpeg",
-        "img/events/CC-3.jpeg",
-        "img/events/CC-2.jpeg",
-        "img/events/CC-6.jpeg",
-        "img/events/CC-5.jpeg",
-        "img/events/CC-7.jpeg",
+        "img/events/radioShow-1.jpeg",
+        "img/events/radioShow-2.jpeg",
       ]
     },
     {
@@ -75,14 +71,10 @@ export const Services = () => {
       description:
         "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
       bannerImage:
-        "img/events/CC_crawl-banner.jpeg",
+        "img/events/radioShow-1.jpeg",
       galleryImages: [
-        "img/events/CC-4.jpeg",
-        "img/events/CC-3.jpeg",
-        "img/events/CC-2.jpeg",
-        "img/events/CC-6.jpeg",
-        "img/events/CC-5.jpeg",
-        "img/events/CC-7.jpeg",
+        "img/events/radioShow-2.jpeg",
+        "img/events/radioShow-1.jpeg",
       ]
     },
     // February 2025 Events
@@ -95,14 +87,10 @@ export const Services = () => {
       description:
         "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
       bannerImage:
-        "img/events/CC_crawl-banner.jpeg",
+      "img/events/radioShow-1.jpeg",
       galleryImages: [
-        "img/events/CC-4.jpeg",
-        "img/events/CC-3.jpeg",
-        "img/events/CC-2.jpeg",
-        "img/events/CC-6.jpeg",
-        "img/events/CC-5.jpeg",
-        "img/events/CC-7.jpeg",
+        "img/events/radioShow-2.jpeg",
+        "img/events/radioShow-1.jpeg",
       ]
     },
     {
@@ -113,53 +101,11 @@ export const Services = () => {
       time: "11:00 AM - 3:00 PM",
       description:
         "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
-      bannerImage:
-        "img/events/CC_crawl-banner.jpeg",
+        bannerImage:
+        "img/events/radioShow-2.jpeg",
       galleryImages: [
-        "img/events/CC-4.jpeg",
-        "img/events/CC-3.jpeg",
-        "img/events/CC-2.jpeg",
-        "img/events/CC-6.jpeg",
-        "img/events/CC-5.jpeg",
-        "img/events/CC-7.jpeg",
-      ]
-    },
-    {
-      date: "2025-02-17",
-      title: "The Trentpreneur Radio Show",
-      type: "Workshop",
-      location: "Peterborough, Ontario",
-      time: "11:00 AM - 3:00 PM",
-      description:
-        "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
-      bannerImage:
-        "img/events/CC_crawl-banner.jpeg",
-      galleryImages: [
-        "img/events/CC-4.jpeg",
-        "img/events/CC-3.jpeg",
-        "img/events/CC-2.jpeg",
-        "img/events/CC-6.jpeg",
-        "img/events/CC-5.jpeg",
-        "img/events/CC-7.jpeg",
-      ]
-    },
-    {
-      date: "2025-02-24",
-      title: "The Trentpreneur Radio Show",
-      type: "Workshop",
-      location: "Peterborough, Ontario",
-      time: "11:00 AM - 3:00 PM",
-      description:
-        "The Trentpreneur Show was broadcasted by two TBSA Executives every Monday at Trent Radio. Listeners explored entrepreneurship, innovation, and additional thought-provoking topics in each session.",
-      bannerImage:
-        "img/events/CC_crawl-banner.jpeg",
-      galleryImages: [
-        "img/events/CC-4.jpeg",
-        "img/events/CC-3.jpeg",
-        "img/events/CC-2.jpeg",
-        "img/events/CC-6.jpeg",
-        "img/events/CC-5.jpeg",
-        "img/events/CC-7.jpeg",
+        "img/events/radioShow-2.jpeg",
+        "img/events/radioShow-1.jpeg",
       ]
     },
     {
