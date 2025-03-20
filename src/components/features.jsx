@@ -72,8 +72,8 @@ export const Features = () => {
 
   return (
     <div id="features" className="tbsa-features">
-      <div className="container">
-        <div className="section-title text-center">
+      <div className="tbsa-container">
+        <div className="features-section-title text-center">
           <h2>Why Join TBSA?</h2>
           <p className="subtitle">Empowering Future Business Leaders</p>
         </div>
@@ -90,7 +90,7 @@ export const Features = () => {
               <div className="feature-content">
                 <h3>{feature.title}</h3>
                 <p>{feature.text}</p>
-              </div>
+              </div>              
             </div>
           ))}
         </div>

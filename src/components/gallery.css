@@ -19,7 +19,7 @@
   .tbsa-gallery-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
   }
   
   .tbsa-section-title {
@@ -42,6 +42,11 @@
     height: 3px;
     background: #8DC63F; /* Trent University light green */
     margin: 0 auto 20px;
+    transition: width 0.3s ease;
+  }
+  
+  .tbsa-section-title:hover .tbsa-title-underline {
+    width: 100px;
   }
   
   .tbsa-section-title p {
@@ -54,8 +59,8 @@
   
   .tbsa-gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
   }
   
   .tbsa-gallery-item {
@@ -65,6 +70,7 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
   }
   
   .tbsa-gallery-item.tbsa-animate-in {
@@ -94,6 +100,7 @@
     position: relative;
     overflow: hidden;
     padding-bottom: 75%; /* 4:3 aspect ratio */
+    background-color: #f0f0f0; /* Light background for loading state */
   }
   
   .tbsa-gallery-image {
@@ -184,23 +191,24 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     padding: 20px;
     animation: tbsaFadeIn 0.3s ease;
+    backdrop-filter: blur(5px);
   }
   
   .tbsa-modal-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     animation: tbsaZoomIn 0.3s ease;
   }
   
@@ -251,6 +259,43 @@
     font-size: 20px;
   }
 
+  /* Navigation arrows for modal */
+  .tbsa-modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tbsa-modal-prev {
+    left: 20px;
+  }
+  
+  .tbsa-modal-next {
+    right: 20px;
+  }
+  
+  .tbsa-modal-nav:hover {
+    background-color: #fff;
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .tbsa-modal-nav i {
+    color: #00563F;
+    font-size: 20px;
+  }
+  
+  /* Enhanced animations */
   @keyframes tbsaZoomIn {
     from {
       opacity: 0;
@@ -273,14 +318,51 @@
     }
   }
   
-  /* Responsive Design */
+  /* Loading animation for images */
+  .tbsa-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tbsa-loading::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(0, 86, 63, 0.3);
+    border-radius: 50%;
+    border-top-color: #00563F;
+    animation: tbsaSpin 1s ease-in-out infinite;
+  }
+  
+  @keyframes tbsaSpin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Improved Responsive Design */
+  @media (max-width: 1200px) {
+    .tbsa-gallery-container {
+      max-width: 95%;
+    }
+  }
+  
   @media (max-width: 992px) {
-    .tbsa-gallery-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .tbsa-gallery-section {
+      padding: 70px 0;
     }
     
     .tbsa-section-title h2 {
       font-size: 32px;
+    }
+    
+    .tbsa-modal-nav {
+      width: 40px;
+      height: 40px;
     }
   }
   
@@ -299,14 +381,27 @@
     
     .tbsa-section-title p {
       font-size: 16px;
+      padding: 0 15px;
+    }
+    
+    .tbsa-gallery-grid {
+      gap: 20px;
+    }
+    
+    .tbsa-modal-content {
+      max-width: 100%;
+    }
+    
+    .tbsa-modal-prev {
+      left: 10px;
+    }
+    
+    .tbsa-modal-next {
+      right: 10px;
     }
   }
   
   @media (max-width: 576px) {
-    .tbsa-gallery-grid {
-      grid-template-columns: 1fr;
-    }
-    
     .tbsa-gallery-section {
       padding: 40px 0;
     }
@@ -314,4 +409,90 @@
     .tbsa-section-title h2 {
       font-size: 24px;
     }
-}
+    
+    .tbsa-gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .tbsa-modal-nav {
+      width: 35px;
+      height: 35px;
+    }
+    
+    .tbsa-modal-close {
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  /* Update hover states to only work on devices that support hover */
+  @media (hover: hover) {
+      .tbsa-gallery-item-inner:hover {
+          transform: translateY(-5px);
+      }
+      
+      .tbsa-gallery-item:hover .tbsa-gallery-image {
+          transform: scale(1.1);
+      }
+      
+      .tbsa-gallery-item:hover .tbsa-gallery-overlay {
+          opacity: 1;
+      }
+      
+      .tbsa-gallery-item:hover .tbsa-gallery-info {
+          transform: translateY(0);
+          opacity: 1;
+      }
+      
+      .tbsa-gallery-zoom:hover {
+          background-color: rgba(255, 255, 255, 0.95);
+          color: #0b2a22;
+          transform: rotate(90deg) scale(1.1);
+      }
+      
+      .tbsa-modal-close:hover {
+          background-color: #fff;
+          transform: rotate(90deg);
+      }
+      
+      .tbsa-modal-nav:hover {
+          background-color: #fff;
+          transform: translateY(-50%) scale(1.1);
+      }
+  }
+  
+  /* Touch device optimizations */
+  @media (hover: none) {
+      .tbsa-gallery-item-inner,
+      .tbsa-gallery-item-inner:hover {
+          transform: none;
+      }
+      
+      .tbsa-gallery-image,
+      .tbsa-gallery-item:hover .tbsa-gallery-image {
+          transform: none;
+      }
+      
+      .tbsa-gallery-overlay {
+          opacity: 0;
+      }
+      
+      .tbsa-gallery-info {
+          opacity: 0;
+          transform: none;
+      }
+      
+      .tbsa-gallery-zoom,
+      .tbsa-gallery-zoom:hover {
+          transform: none;
+      }
+      
+      .tbsa-modal-close:hover,
+      .tbsa-modal-nav:hover {
+          transform: none;
+          background-color: rgba(255, 255, 255, 0.8);
+      }
+  }

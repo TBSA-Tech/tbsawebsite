@@ -30,7 +30,7 @@ export const Contact = (props) => {
     setFormStatus({ submitting: true, success: false, error: false });
     
     // EmailJS configuration
-    const serviceID = 'service_kiaq6il';
+    const serviceID = 'service_b3u5lhr';
     const templateID = 'template_0q56fak';
     const publicKey = 'BsM90qb91TYCjluXN';
     
