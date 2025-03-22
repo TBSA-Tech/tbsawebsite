@@ -1,0 +1,764 @@
+/* platforms.css */
+/* Base Styles */
+:root {
+    --primary: #00703c; /* Trent University green */
+    --primary-dark: #005a30;
+    --secondary: #f8b800; /* Complementary gold/yellow */
+    --accent: #004c29;
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --border: #e2e8f0;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --header-height: 70px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    color: var(--foreground);
+    background-color: var(--background);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--primary-dark);
+  }
+  
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  /* Header Styles */
+  /* Enhanced Header Styles */
+  .header {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 0.75rem 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header-logo {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .home-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    background-color: var(--muted);
+  }
+  
+  .home-link:hover {
+    background-color: var(--border);
+    color: var(--foreground);
+    transform: translateY(-1px);
+  }
+  
+  .search-container {
+    position: relative;
+    width: 300px;
+    transition: width 0.3s ease;
+    padding: 5px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted-foreground);
+    width: 18px;
+    height: 18px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(0, 112, 60, 0.2);
+  }
+  
+  /* Responsive adjustments for the header */
+  @media (max-width: 768px) {
+    .header-logo {
+      height: 32px;
+    }
+    
+    .header h1 {
+      font-size: 1.25rem;
+    }
+    
+    .search-container {
+      width: 220px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header {
+      padding: 0.5rem 0;
+    }
+    
+    .header-container {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .header-left {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .logo-container {
+      gap: 0.5rem;
+    }
+    
+    .header-logo {
+      height: 28px;
+    }
+    
+    .header h1 {
+      font-size: 1.1rem;
+    }
+    
+    .search-container {
+      width: 100%;
+    }
+    
+    .home-link span {
+      display: none;
+    }
+    
+    .home-link {
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    height: 50vh;
+    min-height: 400px;
+    background-image: url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 112, 60, 0.7), rgba(0, 76, 41, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  .delay {
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  
+  /* Position Filter */
+  .position-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    justify-content: center;
+  }
+  
+  .position-filter button {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .position-filter button:hover {
+    background-color: var(--border);
+    color: var(--foreground);
+  }
+  
+  .position-filter button.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+  
+  /* Candidates Grid */
+  .candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(950px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 4rem;
+  }
+  
+  .candidate-card {
+    background-color: var(--card);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .candidate-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+  }
+  
+  .candidate-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+  }
+  
+  .candidate-image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 4px solid #00703c; /* Trent University green */
+    box-shadow: 0 5px 15px rgba(0, 112, 60, 0.3);
+  }
+  
+  .candidate-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .candidate-card:hover .candidate-image {
+    transform: scale(1.05);
+  }
+  
+  .candidate-info {
+    flex-grow: 1;
+  }
+  
+  .candidate-info h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+  }
+  
+  .candidate-position {
+    color: #00703c; /* Trent University green */
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .expand-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    transition: transform 0.3s ease;
+  }
+  
+  .candidate-platform {
+    padding: 1.5rem 0 0;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    animation: slideDown 0.3s ease forwards;
+  }
+  
+  .candidate-platform h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--foreground);
+  }
+  
+  .candidate-platform p {
+    color: var(--muted-foreground);
+    font-size: 0.9375rem;
+    white-space: pre-line;
+  }
+  
+  .goals-list {
+    list-style-type: none;
+    margin-top: 0.75rem;
+  }
+  
+  .goals-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted-foreground);
+    font-size: 0.9375rem;
+    display: flex;
+    align-items: center;
+    animation: slideIn 0.3s ease forwards;
+  }
+  
+  .goal-item {
+    animation-delay: calc(0.1s * var(--index, 0));
+    opacity: 0;
+  }
+  
+  .goals-list li::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    margin-right: 0.75rem;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #00703c; /* Trent University green */
+    color: white;
+    padding: 4rem 0 2rem;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: white;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: white;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      max-height: 0;
+    }
+    to {
+      opacity: 1;
+      max-height: 2000px;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.25rem;
+    }
+  
+    .search-container {
+      width: 200px;
+    }
+  
+    .hero-section h2 {
+      font-size: 2.25rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .candidates-grid {
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      gap: 1.5rem;
+    }
+  
+    .candidate-header {
+      padding: 1.25rem;
+    }
+  
+    .candidate-image-container {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header {
+      height: auto;
+      padding: 1rem 0;
+    }
+  
+    .header .container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .search-container {
+      width: 100%;
+    }
+  
+    .hero-section {
+      min-height: 300px;
+      margin-top: calc(var(--header-height) + 2rem);
+    }
+  
+    .hero-section h2 {
+      font-size: 1.75rem;
+    }
+  
+    .position-filter {
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+  
+    .position-filter button {
+      white-space: nowrap;
+    }
+  
+    .candidates-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+/* Add these styles for the position sections and candidate summaries */
+.candidates-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.position-section {
+  margin-bottom: 4rem;
+}
+
+.position-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 2rem 0 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.position-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.candidates-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(to right, rgba(0, 112, 60, 0.05), rgba(0, 112, 60, 0.1), rgba(0, 112, 60, 0.05));
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.candidate-summary-card {
+  width: 200px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.candidate-summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 112, 60, 0.2);
+}
+
+.candidate-summary-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.candidate-summary-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 25% 25%;
+  transition: transform 0.5s ease;
+}
+
+.candidate-summary-card:hover .candidate-summary-image img {
+  transform: scale(1.05);
+}
+
+.candidate-summary-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--foreground);
+  padding: 0 0.75rem;
+}
+
+.candidate-summary-goals {
+  padding: 0 0.75rem;
+}
+
+.candidate-summary-goals p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.no-candidates {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--muted-foreground);
+  font-style: italic;
+}
+
+/* Ensure proper event isolation */
+.candidate-platform {
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.candidate-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.candidate-card {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .candidates-summary {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .candidate-summary-card {
+    width: 140px;
+  }
+  
+  .candidate-summary-image {
+    height: 140px;
+  }
+  
+  .candidate-summary-card h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .candidates-summary {
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 1rem 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .candidate-summary-card {
+    flex: 0 0 120px;
+    scroll-snap-align: start;
+  }
+  
+  .candidate-summary-image {
+    height: 120px;
+  }
+  
+  .position-title {
+    font-size: 1.75rem;
+  }
+}

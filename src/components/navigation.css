@@ -13,6 +13,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.platforms-page .main-navigation {
+    background-color: transparent;
+}
+
 .main-navigation.scrolled {
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
