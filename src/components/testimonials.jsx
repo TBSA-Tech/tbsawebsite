@@ -44,7 +44,7 @@ export const Testimonials = () => {
   return (
     <div id="testimonials">
       <div className="container">
-        <div className="section-title text-center">
+        <div className="tbsa-section-title text-center">
           <h2>Student Voices</h2>
           <p className="section-subtitle">Hear from our TBSA community</p>
         </div>

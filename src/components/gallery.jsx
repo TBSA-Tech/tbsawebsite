@@ -82,10 +82,10 @@ export const Gallery = (props) => {
   return (
     <div id="portfolio" className="tbsa-gallery-section">
       <div className="tbsa-gallery-container">
-        <div className={`tbsa-section-title ${animated ? 'tbsa-fade-in' : ''}`}>
+        <div className={`tbsa-section-title text-center ${animated ? 'tbsa-fade-in' : ''}`}>
           <h2>Gallery</h2>
           <div className="tbsa-title-underline"></div>
-          <p>
+          <p className="section-subtitle">
             Explore the vibrant moments and highlights from our TBSA events and activities
           </p>
         </div>

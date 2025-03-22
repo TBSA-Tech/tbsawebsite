@@ -22,40 +22,38 @@
     padding: 0 20px;
   }
   
-  .tbsa-section-title {
-    margin-bottom: 50px;
-    text-align: center;
-  }
-  
-  .tbsa-section-title h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #00563F; /* Trent University green */
-    margin-bottom: 15px;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .tbsa-title-underline {
-    width: 70px;
-    height: 3px;
-    background: #8DC63F; /* Trent University light green */
-    margin: 0 auto 20px;
-    transition: width 0.3s ease;
-  }
-  
-  .tbsa-section-title:hover .tbsa-title-underline {
-    width: 100px;
-  }
-  
-  .tbsa-section-title p {
-    font-size: 18px;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
+  /* Section Title */
+.tbsa-section-title {
+  margin-bottom: 60px;
+}
+
+.tbsa-section-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--secondary-green);
+  position: relative;
+  display: inline-block;
+}
+
+.tbsa-section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-green);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 20px auto 0;
+}
   
   .tbsa-gallery-grid {
     display: grid;

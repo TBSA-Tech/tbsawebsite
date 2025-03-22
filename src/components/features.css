@@ -13,27 +13,37 @@
     box-sizing: border-box;
 }
 
-.section-title {
+/* Section Title */
+.tbsa-section-title {
     margin-bottom: 60px;
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.section-title h2 {
-    color: #00563F;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+.tbsa-section-title h2 {
+    font-size: 42px;
     font-weight: 700;
-    margin-bottom: 15px;
-    line-height: 1.2;
+    margin-bottom: 5px;
+    color: var(--secondary-green);
+    position: relative;
+    display: inline-block;
 }
 
-.section-title .subtitle {
-    color: #666;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    margin-bottom: 30px;
-    line-height: 1.6;
+.tbsa-section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-green);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 20px auto 0;
 }
 
 .features-grid {
@@ -201,6 +211,10 @@
         max-width: 720px;
     }
 
+    .tbsa-section-title h2 {
+        font-size: 36px;
+    }
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
@@ -218,10 +232,8 @@
         padding: 0 15px;
     }
 
-    .section-title,
-    .features-section-title {
-        margin-bottom: 40px;
-        width: 100%;
+    .tbsa-section-title h2{
+        font-size: 32px;
     }
 
     .features-grid {
@@ -253,8 +265,9 @@
         padding: 0 10px;
     }
 
-    .section-title,
+    .tbsa-section-title,
     .features-section-title {
+        font-size: 2px;
         padding: 0 10px;
     }
 

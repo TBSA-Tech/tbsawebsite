@@ -64,7 +64,7 @@ export const Team = (props) => {
   return (
     <div id="team" className="team-section">
       <div className="container">
-        <div className="section-title text-center">
+        <div className="tbsa-section-title text-center">
           <h2>Meet the Team</h2>
           <p className="section-subtitle">
             Our talented professionals working together to achieve excellence

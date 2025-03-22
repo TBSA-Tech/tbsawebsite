@@ -264,9 +264,9 @@ export const Services = () => {
   return (
     <div id="services" className="trent-events-section">
       <div className="container">
-        <div className="section-title text-center">
+        <div className="team-section-title text-center">
           <h2>Our Events</h2>
-          <p>Join us for exciting business networking and learning opportunities</p>
+          <p className="section-subtitle">Join us for exciting business networking and learning opportunities</p>
         </div>
 
         <div className="trent-calendar-container">

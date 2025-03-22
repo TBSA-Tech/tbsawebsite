@@ -73,9 +73,9 @@ export const Features = () => {
   return (
     <div id="features" className="tbsa-features">
       <div className="tbsa-container">
-        <div className="features-section-title text-center">
+        <div className="tbsa-section-title text-center">
           <h2>Why Join TBSA?</h2>
-          <p className="subtitle">Empowering Future Business Leaders</p>
+          <p className="section-subtitle">Empowering Future Business Leaders</p>
         </div>
         <div className="features-grid">
           {features.map((feature, index) => (
