@@ -4,9 +4,9 @@ import "./navigation.css";
 
 export const Navigation = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -20,30 +20,55 @@ export const Navigation = (props) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu when clicking a link
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   // Don't render navigation on platforms page
   if (location.pathname === '/platforms') {
     return null;
   }
 
   return (
-    <nav className={`main-navigation ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`main-navigation ${isScrolled ? 'scrolled' : ''} ${mobileMenuOpen ? 'menu-open' : ''}`}>
         <div className="nav-container">
             <div className="nav-logo">
                 <a href="#">
                     <img src="img/logo.png" alt="Company Logo" className="logo-image" />
                 </a>
             </div>
-            <div id="mainListDiv" className="nav-menu">
+            <div id="mainListDiv" className={`nav-menu ${mobileMenuOpen ? 'show' : ''}`}>
                 <ul className="nav-links-list">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Events</a></li>
-                    <li><a href="#portfolio">Gallery</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="/platforms">Elections</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li className="nav-item" style={{"--i": "0"}}>
+                        <a href="#about" onClick={handleLinkClick}>About</a>
+                    </li>
+                    <li className="nav-item" style={{"--i": "1"}}>
+                        <a href="#services" onClick={handleLinkClick}>Events</a>
+                    </li>
+                    <li className="nav-item" style={{"--i": "2"}}>
+                        <a href="#portfolio" onClick={handleLinkClick}>Gallery</a>
+                    </li>
+                    <li className="nav-item" style={{"--i": "3"}}>
+                        <a href="#team" onClick={handleLinkClick}>Team</a>
+                    </li>
+                    <li className="nav-item" style={{"--i": "4"}}>
+                        <a href="/platforms" onClick={handleLinkClick}>Elections</a>
+                    </li>
+                    <li className="nav-item" style={{"--i": "5"}}>
+                        <a href="#contact" onClick={handleLinkClick}>Contact</a>
+                    </li>
                 </ul>
+                <div className="mobile-menu-background">
+                    <div className="blob blob-1"></div>
+                    <div className="blob blob-2"></div>
+                    <div className="blob blob-3"></div>
+                </div>
             </div>
-            <span className="nav-trigger">
+            <span 
+                className={`nav-trigger ${mobileMenuOpen ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
                 <i></i>
                 <i></i>
                 <i></i>

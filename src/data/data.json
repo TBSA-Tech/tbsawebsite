@@ -147,9 +147,21 @@
       "department": "Corporate Affairs"
     },
     {
+      "img": "img/team/kaushik.jpeg",
+      "name": "Kaushik Nag Tumu",
+      "job": "VP Tech & Design",
+      "department": "Tech & Design"
+    },
+    {
+      "img": "img/team/Batool.jpeg",
+      "name": "Batool Kazmi",
+      "job": "Tech & Design Executive",
+      "department": "Tech & Design"
+    },
+    {
       "img": "img/team/Joylyn.JPG",
       "name": "Joylyn D'Souza",
-      "job": "VP Communications and Outreach Associate",
+      "job": "VP Communications and Outreach",
       "department": "Communications"
     },
     {

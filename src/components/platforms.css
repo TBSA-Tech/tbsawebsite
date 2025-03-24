@@ -762,3 +762,53 @@
     font-size: 1.75rem;
   }
 }
+
+/* Profile buttons styling */
+.candidate-profile-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-button svg {
+  transition: transform 0.3s ease;
+}
+
+.profile-button:hover svg {
+  transform: translateY(-2px);
+}
+
+.linkedin-button {
+  background-color: #0077b5;
+  color: white;
+  border: 1px solid #0077b5;
+}
+
+.linkedin-button:hover {
+  background-color: #005e93;
+  box-shadow: 0 4px 8px rgba(0, 119, 181, 0.3);
+}
+
+.resume-button {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.resume-button:hover {
+  background-color: #3d8b40;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}

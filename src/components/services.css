@@ -108,6 +108,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
   z-index: 1000;
   padding: 20px;
 }
@@ -132,6 +133,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+  
 }
 
 
@@ -519,7 +521,7 @@
 
 .event-type-badge.workshop {
   background: rgba(255,193,7,0.9);
-  color: #333;
+  color: #fff;
 }
 
 .event-type-badge.speaker {
@@ -1093,7 +1095,7 @@
 
 .event-type-badge.workshop {
   background: rgba(255,193,7,0.9);
-  color: #333;
+  color: #fff;
 }
 
 .event-type-badge.speaker {

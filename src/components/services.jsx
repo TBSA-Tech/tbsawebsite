@@ -130,7 +130,7 @@ export const Services = () => {
     {
       date: "2025-03-01",
       title: "Buy The River",
-      type: "Competation",
+      type: "Competition",
       location: "Gzowski College, Trent University",
       time: "09:00 AM to 05:00 PM",
       description:
@@ -202,6 +202,12 @@ export const Services = () => {
     newDate.setMonth(newDate.getMonth() + offset);
     setCurrentMonth(newDate);
   };
+
+  const formatEventDate = (dateString) => {
+    const [year, month, day] = dateString.split('-').map(Number);
+    return new Date(year, month - 1, day).toLocaleDateString();
+  };
+  
 
   const { days, firstDay } = getDaysInMonth(currentMonth);
 
@@ -337,7 +343,7 @@ export const Services = () => {
                     <h4>{event.title}</h4>
                     <p className="event-date">
                       <i className="fa fa-calendar"></i>{" "}
-                      {new Date(event.date).toLocaleDateString()}
+                      {formatEventDate(event.date)}
                     </p>
                     <p className="event-location">
                       <i className="fa fa-map-marker"></i> {event.location}
@@ -394,7 +400,7 @@ export const Services = () => {
               <div className="trent-event-modal-body">
                 <p>
                   <strong>Date:</strong>{" "}
-                  {new Date(selectedEvent.date).toLocaleDateString()}
+                  {formatEventDate(selectedEvent.date)}
                 </p>
                 <p>
                   <strong>Time:</strong> {selectedEvent.time}

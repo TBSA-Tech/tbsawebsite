@@ -65,6 +65,11 @@
     height: 75px;
     width: auto;
     transition: all 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.main-navigation.scrolled .logo-image {
+    filter: brightness(0) invert(0);
 }
 
 .nav-links-list {
@@ -94,18 +99,265 @@
     color: #3498db;
 }
 
+/* Add these styles to your navigation.css file */
+
+/* Mobile Menu Styles */
 .nav-trigger {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  z-index: 1001;
 }
 
 .nav-trigger i {
+  background-color: #333;
+  border-radius: 2px;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.nav-trigger i:nth-child(1) {
+  top: 0;
+}
+
+.nav-trigger i:nth-child(2) {
+  top: 10px;
+  width: 75%;
+}
+
+.nav-trigger i:nth-child(3) {
+  top: 20px;
+}
+
+.nav-trigger.active i:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+
+.nav-trigger.active i:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.nav-trigger.active i:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+  background-color: #fff;
+}
+
+/* Mobile Menu Animation */
+@media (max-width: 992px) {
+  .nav-trigger {
     display: block;
-    width: 25px;
+  }
+  
+  /* Set initial transparent background for mobile */
+  .main-navigation {
+    background-color: transparent;
+  }
+  
+  /* Apply white background only when scrolled */
+  .main-navigation.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Make hamburger visible on transparent background */
+  .nav-trigger i {
+    background-color: #fff; /* White color for hamburger on transparent background */
+  }
+  
+  /* Apply white background only when scrolled */
+  .main-navigation.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Update the hamburger menu color when scrolled */
+  .main-navigation.scrolled .nav-trigger i {
+    background-color: #2c3e50;
+  }
+  
+  /* Keep the hamburger white when menu is open, even if scrolled */
+  .main-navigation.scrolled.menu-open .nav-trigger.active i {
+    background-color: #fff;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  
+  .nav-menu.show {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-links-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 10;
+  }
+  
+  .nav-item {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s ease;
+    transition-delay: calc(0.1s * var(--i));
+  }
+  
+  .menu-open .nav-item {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .nav-links-list li a {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-links-list li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
     height: 3px;
     background-color: #fff;
-    margin: 5px 0;
-    transition: 0.3s;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links-list li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Blob Background Animation */
+  .mobile-menu-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background-color: rgba(0, 112, 60, 0.95); /* Trent green with opacity */
+  }
+  
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.7;
+    animation: float 8s infinite ease-in-out;
+  }
+  
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 150, 80, 0.6);
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+  }
+  
+  .blob-2 {
+    width: 350px;
+    height: 350px;
+    background-color: rgba(0, 80, 40, 0.6);
+    bottom: 10%;
+    right: 20%;
+    animation-delay: 2s;
+  }
+  
+  .blob-3 {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 180, 100, 0.5);
+    top: 60%;
+    left: 30%;
+    animation-delay: 4s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.05);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.95);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+  
+  /* Logo animation when menu is open */
+  .logo-image {
+    filter: brightness(0) invert(1);
+  }
+  
+  /* Prevent scrolling when menu is open */
+  .menu-open {
+    overflow: hidden;
+  }
+  
+  /* Scale effect for menu items on hover */
+  .nav-links-list li a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+}
+
+/* Add a subtle entrance animation for desktop menu items too */
+@media (min-width: 993px) {
+  .nav-links-list li a {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links-list li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00703c; /* Trent green */
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links-list li a:hover::after {
+    width: 100%;
+  }
 }
 
 .main-navigation.scrolled .nav-trigger i {
@@ -122,6 +374,10 @@
         display: block;
     }
 
+    .main-navigation{
+        background: linear-gradient(135deg, rgba(0, 86, 63, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%);
+    }
+
     .nav-menu.active {
         display: block;
         position: absolute;
@@ -136,6 +392,7 @@
     .nav-links-list {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .nav-links-list li {
@@ -145,4 +402,23 @@
     .nav-links-list li a {
         color: #2c3e50;
     }
+}
+
+/* Fix the conflicting media query that was overriding our mobile menu */
+@media screen and (max-width: 768px) {
+  /* Remove these styles as they conflict with our animated menu */
+  .nav-menu {
+    display: flex; /* Override display: none */
+  }
+  
+  .nav-menu.active {
+    position: fixed; /* Not absolute */
+    top: 0; /* Not 65px */
+    padding: 0; /* Not 20px 0 */
+  }
+  
+  /* Keep the nav links white in the mobile menu */
+  .nav-links-list li a {
+    color: #fff; /* Override the color: #2c3e50 */
+  }
 }

@@ -12,6 +12,7 @@ export const Team = (props) => {
       "Finance",
       "Marketing",
       "Corporate Affairs",
+      "Tech & Design",
       "Communications",
       "Events",
       "Human Resources",

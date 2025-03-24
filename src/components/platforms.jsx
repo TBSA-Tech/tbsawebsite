@@ -34,6 +34,8 @@ export function CandidatePlatforms() {
       name: 'Yash Ramnani',
       position: 'president',
       image: 'img/team/Yash_VP.JPG',
+      linkedin: 'https://linkedin.com/in/yashramnani',
+      resume: '/resumes/yash-ramnani-resume.pdf',
       platform: `As a candidate for Student Union President, I am committed to fostering an inclusive, innovative, and supportive campus environment. My platform is built on three core pillars: accessibility, sustainability, and community engagement.
 
       First and foremost, I believe that education should be accessible to all students regardless of their background or circumstances. If elected, I will advocate for expanded financial aid opportunities, more flexible course options, and improved support services for students with disabilities. I will work closely with administration to ensure that our campus is physically accessible and that digital resources are available to all students.
@@ -258,6 +260,30 @@ export function CandidatePlatforms() {
                         <div className="candidate-summary-goals">
                           <p>{candidate.goals[0]}</p>
                         </div>
+                        <div className="candidate-links">
+                            {candidate.linkedin && (
+                            <a 
+                                href={candidate.linkedin} 
+                                className="candidate-link linkedin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                LinkedIn
+                            </a>
+                            )}
+                            {candidate.resume && (
+                            <a 
+                                href={candidate.resume} 
+                                className="candidate-link resume"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                Resume
+                            </a>
+                            )}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -294,6 +320,41 @@ export function CandidatePlatforms() {
                                 <li key={index} className="goal-item">{goal}</li>
                               ))}
                             </ul>
+                            
+                            <div className="candidate-profile-links">
+                              {candidate.linkedin && (
+                                <a 
+                                  href={candidate.linkedin} 
+                                  className="profile-button linkedin-button"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                  </svg>
+                                  LinkedIn Profile
+                                </a>
+                              )}
+                              {candidate.resume && (
+                                <a 
+                                  href={candidate.resume} 
+                                  className="profile-button resume-button"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                  </svg>
+                                  View Resume
+                                </a>
+                              )}
+                            </div>
                           </div>
                         )}
                       </div>
