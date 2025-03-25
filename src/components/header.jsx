@@ -37,10 +37,10 @@ export const Header = (props) => {
             </div>
             
             <h1 className="tbsa-title">
-              <span className="tbsa-title-word">{props.data ? props.data.title : "Trent Business Students' Association"}</span>
+              <span className="tbsa-title-word">{props.data ? props.data.title : "Trent Business Students Association"}</span>
             </h1>
             
-            <p className="tbsa-subtitle">{props.data ? props.data.paragraph : "Trent Business Student's association is a student run levy-group at Trent University which is catered to the business majors at Trent University"}</p>
+            <p className="tbsa-subtitle">{props.data ? props.data.paragraph : "Trent Business Students association is a student run levy-group at Trent University which is catered to the business majors at Trent University"}</p>
             
             <div className="tbsa-cta-container">
               <a href="#features" className="tbsa-cta-button">

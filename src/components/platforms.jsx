@@ -252,7 +252,7 @@ export function CandidatePlatforms() {
       position: "president",
       image: "img/platforms/yash-ramnani.jpg",
       linkedin: "https://www.linkedin.com/in/yash-ramnani-4b737b255/",
-      resume: "/resumes/yash-ramnani-resume.pdf",
+      resume: "img/platforms/yash.pdf",
       platform: `My name is Yash Ramnani. I am a 3rd Year International Student in the Business program with a specialization in Entrepreneurship. I am running to be your next President for 2025/2026 Academic Year.
 
 Over the past year, I’ve had the privilege of serving as the Executive Vice President of TBSA, playing a core role in revitalizing this association alongside an incredible team. Since last summer, I’ve worked closely with the President to rebuild TBSA from the ground up — from organizing and hiring our VPs and Associates to supporting every level of operation.
@@ -279,8 +279,8 @@ I’d be honored to continue serving and leading this community forward.
       name: "Joh Magok",
       position: "president",
       image: "img/platforms/Magok.jpg",
-      linkedin: "www.linkedin.com/in/joh-magok",
-      resume: "img/platforms/magok_resume.docx",
+      linkedin: "https://www.linkedin.com/in/joh-magok",
+      resume: "img/platforms/magok_resume.pdf",
       platform: `Voicing your Vision
                   Hi, my name is Magok. I am running for the next president of the Trent School of Business. Why?  I am enthusiastic to chart a path to paint a new face to the Trent School of Business.  Together we will create a lively, innovative, and empowering environment for every student in the School of Business.
 
@@ -358,7 +358,7 @@ Your vote is your voice. Let’s build something extraordinary.
       position: "vp-finance",
       image: "img/platforms/Chiya.jpg",
       linkedin: "https://www.linkedin.com/in/zainab-chiya-89188634a",
-      resume: "zainabChiya.pdf",
+      resume: "img/platforms/zainabChiya.pdf",
       platform: `Hello Trent Business and Economics students!
 
       My name is Zainab Chiya, and I am a 3rd-year Business Administration student specializing in Accounting. I am thrilled to announce my candidacy for Vice President of Finance for the Trent Business Student Association. As your current Communications and Outreach Associate within the TBSA, I have had the privilege of working closely with our team to build connections and engage with our vibrant student community. Now, I am eager to take on a new role that aligns with my passion for financial management and dedication to serving you.
@@ -395,7 +395,7 @@ Thank you for your consideration, and I look forward to earning your vote!
       position: "vp-finance",
       image: "img/platforms/Carter.jpg",
       linkedin: "https://www.linkedin.com/in/bryanna-carter",
-      resume: "Carter.pdf",
+      resume: "img/platforms/Carter.pdf",
       platform: `Welcome. 
 
 My name is Bryanna Carter, and I'm applying to be the Vice President of Finance of the Trent Business Student Association (TBSA) at Trent University. I am in my fourth year with a Bachelor of Science in Business Administration and Forensic Science with a minor in Anthropology and a Specialization in Law and Policing. As a dedicated student and the outgoing Joint-Major Representative and incoming Treasurer of the Forensic Science Society, this year's Co-Chair of the East vs West Charity Hockey Game, and outgoing Community Representative of the Otonabee College Cabinet, I am eager to put the skills I have gained and continue my love of engagement and collaboration. I can fulfill the Vice President of Finance role with high attention to detail and organizational skills. 
@@ -498,7 +498,7 @@ Your vote is your voice. Let’s build something extraordinary. Let’s make thi
       position: 'vp-relations',
       image: 'img/platforms/Jammal.jpg',
       linkedin: 'https://www.linkedin.com/in/ali-jammal-/',
-      resume: 'img/platforms/Jammal.docx',
+      resume: 'img/platforms/Jammal.pdf',
       platform: `Ali Jammal for VP of Corporate Affairs
 
       More Connections. More Funding. More Opportunities.
@@ -558,7 +558,7 @@ Contact: ethenninan@trentu.ca
       position: 'vp-comms',
       image: 'img/platforms/JJ.jpeg',
       linkedin: 'https://www.linkedin.com/in/joel-jude-partey-1880331a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-      resume: 'img/platforms/JJ.docx',
+      resume: 'img/platforms/JJ.pdf',
       platform: `I’m thrilled to announce my candidacy for Vice President of Communications & Outreach for the Trent Business Students Association (TBSA). As a Business Finance student at Trent University, I’m passionate about bringing people together, amplifying student voices, and creating engaging content that represents our dynamic community.
 
       This role isn’t just about managing social media, it’s about fostering real connections, strengthening our presence on and off campus, and ensuring every student feels heard and involved. That’s exactly what I aim to do.
@@ -600,7 +600,7 @@ Thank you for your time and consideration.
       position: 'vp-comms',
       image: 'img/platforms/Kalra.png',
       linkedin: 'https://www.linkedin.com/in/lakshit-kalra-220569236/',
-      resume: 'img/platforms/Kalra.docx',
+      resume: 'img/platforms/Kalra.pdf',
       platform: `Hello, Trent Business community! I am Lakshit Kalra, and I am excited to be standing as a candidate for Vice President of Communications & Outreach for the Trent Business Students Association (TBSA). As an Honours Business Administration student, I have a strong foundation in social media management, content creation, and outreach. My internship with TeenPreneurs, in which I designed and executed social media campaigns, engaged with influencers, and amplified my brand presence, has awarded me expertise in digital communication. In addition, with my internship with Pure Pristine Products, I handled eBook publishing and internet marketing, enhancing my understanding of branding and reaching the audience. I also possess a solid videography background, having served as a videographer for four consecutive years for Goenka World MUN. I captured and edited event coverage, created promotional videos, and coordinated media coverage. This consistent commitment is a testament to my ability to handle communication, brand-building, and outreach—key competencies of this role.
 
       If elected, I will ensure a better online presence for TBSA through frequent and engaging content on Instagram, LinkedIn, and TikTok, with frequent updates and more student participation. I will ensure stronger student connections through better communication between TBSA and the business student population, with simple updates on events, networking, and resources. I intend to promote the TBSA events by strengthening collaborations with student organizations, faculty, and industry professionals, making the student experience more valuable. I will also ensure that the Trentpreneur Radio Show is entertaining and informative, featuring student entrepreneurs, alums, and industry guests to provide insights into the business world.
@@ -615,8 +615,8 @@ Thank you for your time and consideration.
       name: 'Tapchin Dawurang',
       position: 'vp-comms',
       image: 'img/platforms/Tapchin.jpeg',
-      linkedin: 'https://www.linkedin.com/public-profile/settings?trk=d_flagship 3_profile_self_view_public_profile',
-      resume: 'img/platforms/Tapchin.docx',
+      linkedin: 'https://www.linkedin.com/in/tapchin-dawurang-02a358259/',
+      resume: 'img/platforms/Tapchin.pdf',
       platform: `Hello,
 My name is Tapchin Dawurang, a third-year Business Administration & Information Systems major, and I’m excited to run for the position of Vice President Communications and Outreach of the TBSA. Being an excellent communicator, a passionate content creator and a social-media-savvy Business student, I’m beyond certain that my tenure would leave an evident impact on the TBSA, and would greatly improve the Associations social and online presence. The goal is maximum exposure, and I will achieve just that. 
 
@@ -654,11 +654,11 @@ I am committed to making the TBSA a more dynamic and student-focused organizatio
     },
     {
       id:16,
-      name: 'Angad Veer Sigh Bedi',
+      name: 'Angadveer Sigh Bedi',
       position: 'vp-confs',
       image: 'img/platforms/Bedi.jpeg',
       linkedin: 'https://www.linkedin.com/in/angadveer-singh-bedi-9774a2295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-      resume: 'img/platforms/',
+      resume: 'img/platforms/Bedi.pdf',
       platform: `Why Vote For Me?
 
       As VP of Conferences & Case Competitions, I will do more than just promote opportunities—I will create a system that ensures student success, engagement, and recognition in case competitions and conferences. My plan is about accessibility, preparation, and industry integration to give TBSA students an edge.
@@ -736,7 +736,7 @@ Vote Khushal Sethiya for VP Conferences/Case Competitions!
       position: 'vp-hr',
       image: 'img/platforms/Adesanya.jpg',
       linkedin: 'https://www.linkedin.com/in/adedamolaadesanya',
-      resume: 'img/platforms/Adesanya.docx',
+      resume: 'img/platforms/Adesanya.pdf',
       platform: `Dear Trent Business Student Association Members,
 My name is Adedamola Adesanya, and I am excited to announce my candidacy for the Vice President of Human Resources position for the Trent Business Student Association (TBSA). As a fourth-year Business Administration student specializing in Human Resources and the current HR Associate for TBSA, I have firsthand experience in supporting our student community and driving HR initiatives within the association.
 
@@ -791,7 +791,7 @@ Vote for Rita for VP of Human Resources!
       position: 'vp-hr',
       image: 'img/platforms/Bless.png',
       linkedin: 'https://www.linkedin.com/in/millicent-dzikunu-0671b623b',
-      resume: 'img/platforms/Bless.docx',
+      resume: 'img/platforms/Bless.pdf',
       platform: `Dear TBSA ,
       I am excited to express my interest in the Vice President of Human Resources role at the Trent Business Students Association (TBSA). As a passionate and driven individual with strong leadership and interpersonal skills, I am eager to contribute to fostering a positive, cohesive, and inclusive environment for TBSA members.
 
