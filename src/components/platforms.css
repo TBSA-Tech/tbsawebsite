@@ -750,7 +750,7 @@ footer {
   .candidates-summary {
     flex-direction: row;
     overflow-x: auto;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 1rem 0.5rem;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
