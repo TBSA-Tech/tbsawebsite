@@ -840,21 +840,21 @@ Vote for Rita for VP of Human Resources!
       
       Key Initiatives
       1.	Creating the TBSA Website; Revamping Digital Presence
-          o	For better navigation and accessibility.
-          o	Up-to-date content, event listings, and announcements.
-          o	Implement a feedback system to continuously enhance the platform.
+          -	For better navigation and accessibility.
+          -	Up-to-date content, event listings, and announcements.
+          -	Implement a feedback system to continuously enhance the platform.
       
       2.	Enhanced Communication & Collaboration Tools
-          o	Introduce a structured digital workspace (Discord) for TBSA executives and members.
-          o	Develop a centralized resource hub for important documents and updates.
+          -	Introduce a structured digital workspace (Discord) for TBSA executives and members.
+          -	Develop a centralized resource hub for important documents and updates.
       
       3.	Automation & Data
-          o	Create user-friendly systems for event registrations and feedback collection.
-          o	Implement data driven statistics and reporting tools for events. To find the most needed events.
+          -	Create user-friendly systems for event registrations and feedback collection.
+          -	Implement data driven statistics and reporting tools for events. To find the most needed events.
       
       4.	Support for Student Tech Initiatives
-          o	Provide resources for students interested in tech projects.
-          o	Encourage partnerships with local and global tech communities.
+          -	Provide resources for students interested in tech projects.
+          -	Encourage partnerships with local and global tech communities.
       
       By voting for me as your Vice President Technology, you are supporting a future where technology empowers students through exposure and enhances their experience. Let's build a smarter TBSA!`,
   },
