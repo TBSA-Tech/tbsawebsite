@@ -357,7 +357,7 @@ Your vote is your voice. Let’s build something extraordinary.
       name: "Zainab Ahsan Chiya",
       position: "vp-finance",
       image: "img/platforms/Chiya.jpg",
-      linkedin: "www.linkedin.com/in/zainab-chiya-89188634a",
+      linkedin: "https://www.linkedin.com/in/zainab-chiya-89188634a",
       resume: "zainabChiya.pdf",
       platform: `Hello Trent Business and Economics students!
 
@@ -394,7 +394,7 @@ Thank you for your consideration, and I look forward to earning your vote!
       name: "Bryanna Carter",
       position: "vp-finance",
       image: "img/platforms/Carter.jpg",
-      linkedin: "www.linkedin.com/in/bryanna-carter",
+      linkedin: "https://www.linkedin.com/in/bryanna-carter",
       resume: "Carter.pdf",
       platform: `Welcome. 
 
@@ -532,7 +532,7 @@ Vote Ali Jammal for VP of Corporate Affairs because sponsorships shouldn’t be 
       name: 'Ethen Jacob Ninan',
       position: 'vp-relations',
       image: 'img/platforms/Jacob.JPG',
-      linkedin: 'www.linkedin.com/in/ethen-jacob-ninan-21a0b525a',
+      linkedin: 'https://www.linkedin.com/in/ethen-jacob-ninan-21a0b525a',
       resume: 'img/platforms/Jacob.pdf',
       platform: `Hello,
 My name is Ethen Jacob Ninan. I am a third-year student studying Business and Media, and this is my candidate platform for my application to run for VP of HR for the Trent Business Student Association 2025-26. As VP of HR in the TBSA, you can expect me to maintain a steady yet strong culture within the group as well as create a healthy and conducive environment for the upcoming members to work in harmony. 
@@ -735,7 +735,7 @@ Vote Khushal Sethiya for VP Conferences/Case Competitions!
       name: 'Adedamola (Dami) Adesanya',
       position: 'vp-hr',
       image: 'img/platforms/Adesanya.jpg',
-      linkedin: 'www.linkedin.com/in/adedamolaadesanya',
+      linkedin: 'https://www.linkedin.com/in/adedamolaadesanya',
       resume: 'img/platforms/Adesanya.docx',
       platform: `Dear Trent Business Student Association Members,
 My name is Adedamola Adesanya, and I am excited to announce my candidacy for the Vice President of Human Resources position for the Trent Business Student Association (TBSA). As a fourth-year Business Administration student specializing in Human Resources and the current HR Associate for TBSA, I have firsthand experience in supporting our student community and driving HR initiatives within the association.
@@ -810,7 +810,7 @@ Vote for Rita for VP of Human Resources!
       name: 'Dhrumil Dungrani',
       position: 'vp-tech',
       image: 'img/platforms/dave.jpg',
-      linkedin: 'www.linkedin.com/in/ddungrani',
+      linkedin: 'https://www.linkedin.com/in/ddungrani',
       resume: 'img/platforms/dave.pdf',
       platform: `Leadership, Innovation, and Efficiency—these are the pillars I will bring to the Trent Business Students’ Association (TBSA) as your next Vice President of Technology. As a third-year Computer Science student with a planned minor in Business Administration, I have dedicated my time at Trent University to not only excel academically but also foster a meaningful change in student organizations.
 
