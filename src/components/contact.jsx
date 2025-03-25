@@ -179,7 +179,7 @@ export const Contact = (props) => {
                     </div>
                     <div className="mcf_info_content">
                       <span className="mcf_info_label">Location</span>
-                      <p className="mcf_info_text">{props.data ? props.data.address : "Our Address"}</p>
+                      <p className="mcf_info_text">{props.data ? props.data.address : "1600 W Bank Dr, Peterborough, ON K9L 0G2"}</p>
                     </div>
                   </div>
                   
@@ -192,7 +192,7 @@ export const Contact = (props) => {
                     </div>
                     <div className="mcf_info_content">
                       <span className="mcf_info_label">Email</span>
-                      <p className="mcf_info_text">{props.data ? props.data.email : "contact@example.com"}</p>
+                      <p className="mcf_info_text">{props.data ? props.data.email : "tbsacommunications@gmail.com"}</p>
                     </div>
                   </div>
                 </div>
