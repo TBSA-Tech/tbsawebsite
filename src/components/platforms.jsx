@@ -824,41 +824,40 @@ Vote for Rita for VP of Human Resources!
 `,
     },
     {
-      id:22,
+      id: 22,
       name: 'Muhammad Raffay',
       position: 'vp-tech',
       image: 'img/platforms/Magoon.jpg',
       linkedin: 'https://www.linkedin.com/in/mr25/',
       resume: 'img/platforms/Magoon.pdf',
-      platform: `My name is Muhammad Raffay, and I am excited to announce my candidacy for Vice President Technology at TBSA. 
-
-      Here’s a $1 for you visit the link https://boisterous-baklava-bce4a3.netlify.app/ 
-
-      As an innovative student with a background in all thing’s tech & I am committed to improving the technological landscape of TBSA to enhance student experience business (I mean, someone has to, right?), by effectively utilising modern technology (except the Wi-Fi.)
-
+      platform: `My name is Muhammad Raffay, and I am excited to announce my candidacy for Vice President Technology at TBSA.
+      
+      Here’s a $1 for you visit the link: <a href="https://boisterous-baklava-bce4a3.netlify.app" style="color: #0077b5; text-decoration: underline;">https://boisterous-baklava-bce4a3.netlify.app</a>
+      
+      As an innovative student with a background in all thing's tech & I am committed to improving the technological landscape of TBSA to enhance student experience business (I mean, someone has to, right?), by effectively utilising modern technology (except the Wi-Fi.)
+      
       My vision is to leverage technology to create an interactive digital ecosystem for TBSA members. Even your grandma will want to sign up.
-
+      
       Key Initiatives
-1.	Creating the TBSA Website; Revamping Digital Presence
-o	For better navigation and accessibility.
-o	Up-to-date content, event listings, and announcements.
-o	Implement a feedback system to continuously enhance the platform.
-
-2.	Enhanced Communication & Collaboration Tools
-o	Introduce a structured digital workspace (Discord) for TBSA executives and members.
-o	Develop a centralized resource hub for important documents and updates.
-
-3.	Automation & Data
-o	Create user-friendly systems for event registrations and feedback collection.
-o	Implement data driven statistics and reporting tools for events. To find the most needed events.
-
-4.	Support for Student Tech Initiatives
-o	Provide resources for students interested in tech projects.
-o	Encourage partnerships with local and global tech communities.
-
-By voting for me as your Vice President Technology, you are supporting a future where technology empowers students through exposure and enhances their experience. Let’s build a smarter TBSA!
-`,
-    },
+      1.	Creating the TBSA Website; Revamping Digital Presence
+          o	For better navigation and accessibility.
+          o	Up-to-date content, event listings, and announcements.
+          o	Implement a feedback system to continuously enhance the platform.
+      
+      2.	Enhanced Communication & Collaboration Tools
+          o	Introduce a structured digital workspace (Discord) for TBSA executives and members.
+          o	Develop a centralized resource hub for important documents and updates.
+      
+      3.	Automation & Data
+          o	Create user-friendly systems for event registrations and feedback collection.
+          o	Implement data driven statistics and reporting tools for events. To find the most needed events.
+      
+      4.	Support for Student Tech Initiatives
+          o	Provide resources for students interested in tech projects.
+          o	Encourage partnerships with local and global tech communities.
+      
+      By voting for me as your Vice President Technology, you are supporting a future where technology empowers students through exposure and enhances their experience. Let's build a smarter TBSA!`,
+  },
   ];
 
   // Group candidates by position
@@ -1136,7 +1135,13 @@ By voting for me as your Vice President Technology, you are supporting a future 
                           onClick={(e) => e.stopPropagation()}
                         >
                           <h4>Platform</h4>
-                          <p>{candidate.platform}</p>
+                            <p 
+                          dangerouslySetInnerHTML={{ 
+                            __html: candidate.platform
+                              .replace(/\n/g, '<br>')
+                              .replace(/\s\s+/g, ' &nbsp;') 
+                          }}
+                        ></p>
                         </div>
                       )}
                     </div>
