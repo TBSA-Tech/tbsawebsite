@@ -710,7 +710,7 @@ Multidisciplinary Case Teams & Wildcard Entries
     },
     {
       id:17,
-      name: 'Kushal Sethiya',
+      name: 'Khushal Sethiya',
       position: 'vp-confs',
       image: 'img/platforms/Sethiya.png',
       linkedin: 'https://www.linkedin.com/in/khushalsethiya/ ',
