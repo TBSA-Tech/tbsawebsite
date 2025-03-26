@@ -528,31 +528,6 @@ Vote Ali Jammal for VP of Corporate Affairs because sponsorships shouldn’t be 
 `,
     },
     {
-      id:11,
-      name: 'Ethen Jacob Ninan',
-      position: 'vp-hr',
-      image: 'img/platforms/Jacob.JPG',
-      linkedin: 'https://www.linkedin.com/in/ethen-jacob-ninan-21a0b525a',
-      resume: 'img/platforms/Jacob.pdf',
-      platform: `Hello,
-My name is Ethen Jacob Ninan. I am a third-year student studying Business and Media, and this is my candidate platform for my application to run for VP of HR for the Trent Business Student Association 2025-26. As VP of HR in the TBSA, you can expect me to maintain a steady yet strong culture within the group as well as create a healthy and conducive environment for the upcoming members to work in harmony. 
-I believe passionate people working toward a common goal with dedication and perseverance can achieve amazing things. However, to such an end, there is a constant need to ensure that all members of the group reach a common state of understanding as well as a common standard of workplace behavior. In my attempt to do this to the best of my abilities, I aim:
-to build a strong and respectful culture within the team, one that is inclusive in nature and runs on camaraderie and understanding. 
-to make policies based on the dynamic of the group, as members would have different workstyles and cultural differences, I would ensure that the policies made for our work consider everyone’s abilities. 
-to keep a professionally liberal experience for our members, by keeping a strict lookout on duties while ensuring members know that they have the freedom to use their creative leverage in their work. 
-to be fair and just during conflict resolution, by establishing a resolution system that provides members with the confidence to confide in the resolving member as a part of maintaining open communication within the team.
-to implement an organized and effective recruitment system, by appealing to a diverse and talented body of students while ensuring their growth in the organization by setting desirable goals and targets, as a strong team is only as strong as its members.
-
-I believe I am the right candidate for this position as my approach to the position is professionally strict yet comforting as my group policies would be based on my members themselves and their characters. Additionally, I genuinely care about the well-being and success of every member and am passionate about carrying on the torch that would be passed on to me while respecting the culture and name that was created for TBSA by its past members. 
-
-For any further questions or information about my platform, please feel free to reach out to me!
-Ethen Jacob Ninan
-Contact: ethenninan@trentu.ca
-
-
-`,
-    },
-    {
       id: 12,
       name: 'Joel Jude Partey',
       position: 'vp-comms',
@@ -803,6 +778,31 @@ Vote for Rita for VP of Human Resources!
 
       Best regards,
       Millicent Bless Dzikunu
+`,
+    },
+    {
+      id:11,
+      name: 'Ethen Jacob Ninan',
+      position: 'vp-hr',
+      image: 'img/platforms/Jacob.JPG',
+      linkedin: 'https://www.linkedin.com/in/ethen-jacob-ninan-21a0b525a',
+      resume: 'img/platforms/Jacob.pdf',
+      platform: `Hello,
+My name is Ethen Jacob Ninan. I am a third-year student studying Business and Media, and this is my candidate platform for my application to run for VP of HR for the Trent Business Student Association 2025-26. As VP of HR in the TBSA, you can expect me to maintain a steady yet strong culture within the group as well as create a healthy and conducive environment for the upcoming members to work in harmony. 
+I believe passionate people working toward a common goal with dedication and perseverance can achieve amazing things. However, to such an end, there is a constant need to ensure that all members of the group reach a common state of understanding as well as a common standard of workplace behavior. In my attempt to do this to the best of my abilities, I aim:
+to build a strong and respectful culture within the team, one that is inclusive in nature and runs on camaraderie and understanding. 
+to make policies based on the dynamic of the group, as members would have different workstyles and cultural differences, I would ensure that the policies made for our work consider everyone’s abilities. 
+to keep a professionally liberal experience for our members, by keeping a strict lookout on duties while ensuring members know that they have the freedom to use their creative leverage in their work. 
+to be fair and just during conflict resolution, by establishing a resolution system that provides members with the confidence to confide in the resolving member as a part of maintaining open communication within the team.
+to implement an organized and effective recruitment system, by appealing to a diverse and talented body of students while ensuring their growth in the organization by setting desirable goals and targets, as a strong team is only as strong as its members.
+
+I believe I am the right candidate for this position as my approach to the position is professionally strict yet comforting as my group policies would be based on my members themselves and their characters. Additionally, I genuinely care about the well-being and success of every member and am passionate about carrying on the torch that would be passed on to me while respecting the culture and name that was created for TBSA by its past members. 
+
+For any further questions or information about my platform, please feel free to reach out to me!
+Ethen Jacob Ninan
+Contact: ethenninan@trentu.ca
+
+
 `,
     },
     {
