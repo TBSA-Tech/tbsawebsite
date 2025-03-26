@@ -832,7 +832,7 @@ Contact: ethenninan@trentu.ca
       resume: 'img/platforms/Magoon.pdf',
       platform: `My name is Muhammad Raffay, and I am excited to announce my candidacy for Vice President Technology at TBSA.
       
-      Here’s a $1 for you, visit the link: <a href="https://boisterous-baklava-bce4a3.netlify.app" style="color: #0077b5; text-decoration: underline;">link</a>
+      Here’s a $1 for you, visit the <a href="https://boisterous-baklava-bce4a3.netlify.app" style="color: #0077b5; text-decoration: underline;">link</a>
       
       As an innovative student with a background in all thing's tech & I am committed to improving the technological landscape of TBSA to enhance student experience business (I mean, someone has to, right?), by effectively utilising modern technology (except the Wi-Fi.)
       
