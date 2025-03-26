@@ -25,7 +25,7 @@ Our website is designed to:
 ## 🖥️ Technologies Used
 This project utilizes:
 
-- **Frontend**: [React.js](https://reactjs.org/) & [Vite](https://vitejs.dev/)
+- **Frontend**: [React.js](https://reactjs.org/) 
 - **Hosting**: [Vercel](https://firebase.google.com/) (Hosting)
 - **Version Control**: [GitHub](https://github.com/)
 
