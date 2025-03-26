@@ -530,7 +530,7 @@ Vote Ali Jammal for VP of Corporate Affairs because sponsorships shouldn’t be 
     {
       id:11,
       name: 'Ethen Jacob Ninan',
-      position: 'vp-relations',
+      position: 'vp-hr',
       image: 'img/platforms/Jacob.JPG',
       linkedin: 'https://www.linkedin.com/in/ethen-jacob-ninan-21a0b525a',
       resume: 'img/platforms/Jacob.pdf',
@@ -832,7 +832,7 @@ Vote for Rita for VP of Human Resources!
       resume: 'img/platforms/Magoon.pdf',
       platform: `My name is Muhammad Raffay, and I am excited to announce my candidacy for Vice President Technology at TBSA.
       
-      Here’s a $1 for you visit the link: <a href="https://boisterous-baklava-bce4a3.netlify.app" style="color: #0077b5; text-decoration: underline;">link</a>
+      Here’s a $1 for you, visit the link: <a href="https://boisterous-baklava-bce4a3.netlify.app" style="color: #0077b5; text-decoration: underline;">link</a>
       
       As an innovative student with a background in all thing's tech & I am committed to improving the technological landscape of TBSA to enhance student experience business (I mean, someone has to, right?), by effectively utilising modern technology (except the Wi-Fi.)
       
@@ -1031,7 +1031,13 @@ Vote for Rita for VP of Human Resources!
                             onClick={(e) => e.stopPropagation()}
                           >
                             <h4>Platform</h4>
-                            <p>{candidate.platform}</p>
+                            <p 
+                            dangerouslySetInnerHTML={{ 
+                              __html: candidate.platform
+                                .replace(/\n/g, '<br>')
+                                .replace(/\s\s+/g, ' &nbsp;') 
+                            }}
+                          ></p>
                           </div>
                         )}
                       </div>
