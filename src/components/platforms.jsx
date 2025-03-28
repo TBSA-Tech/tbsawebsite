@@ -282,12 +282,12 @@ I’d be honored to continue serving and leading this community forward.
       linkedin: "https://www.linkedin.com/in/joh-magok",
       resume: "img/platforms/magok_resume.pdf",
       platform: `Voicing your Vision
-                  Hi, my name is Magok. I am running for the next president of the Trent School of Business. Why?  I am enthusiastic to chart a path to paint a new face to the Trent School of Business.  Together we will create a lively, innovative, and empowering environment for every student in the School of Business.
+                  Hi, my name is Magok. I am running for the next president of the Trent Business Student Association. Why?  I am enthusiastic to chart a path to paint a new face to the Trent Business Student Association.  Together we will create a lively, innovative, and empowering environment for every student in the School of Business.
 
                   My experience as a student ambassador and a keen observer of the happenings in the business world and the leading schools of businesses in Canada and around the globe has impressed an unquenchable desire to bring the needed change that will leave a lasting impact in your career, my career, and the greater Trent community.
                   
                   What do I bring?
-                  My vision for the Trent School of Business is to 
+                  My vision for the Trent Business Student Association is to 
                   1. Reintroduce Trent business TED Talks.  The last one held at Trent was 12 years ago.
                   2. Alumni connect: Great experience comes from connecting with the right people. It is my vision to create a strong network of connection with the Trent alumni and initiate mentorship opportunities.
                   3. Strengthen relations and increase engagement with Innovation Cluster and similar organizations.
@@ -823,41 +823,41 @@ Contact: ethenninan@trentu.ca
       I have built my time at Trent around service—ensuring that the organizations I work with leave a meaningful impact on students. With your support, I will continue working towards a Trent that is more connected, efficient, and enriched with opportunities for every student.
 `,
     },
-    {
-      id: 22,
-      name: 'Muhammad Raffay',
-      position: 'vp-tech',
-      image: 'img/platforms/Magoon.jpg',
-      linkedin: 'https://www.linkedin.com/in/mr25/',
-      resume: 'img/platforms/Magoon.pdf',
-      platform: `My name is Muhammad Raffay, and I am excited to announce my candidacy for Vice President Technology at TBSA.
+  //   {
+  //     id: 22,
+  //     name: 'Muhammad Raffay',
+  //     position: 'vp-tech',
+  //     image: 'img/platforms/Magoon.jpg',
+  //     linkedin: 'https://www.linkedin.com/in/mr25/',
+  //     resume: 'img/platforms/Magoon.pdf',
+  //     platform: `My name is Muhammad Raffay, and I am excited to announce my candidacy for Vice President Technology at TBSA.
       
-      Here’s a $1 for you, visit the <a href="https://boisterous-baklava-bce4a3.netlify.app" style="color: #0077b5; text-decoration: underline;">link</a>
+  //     Here’s a $1 for you, visit the <a href="https://boisterous-baklava-bce4a3.netlify.app" style="color: #0077b5; text-decoration: underline;">link</a>
       
-      As an innovative student with a background in all thing's tech & I am committed to improving the technological landscape of TBSA to enhance student experience business (I mean, someone has to, right?), by effectively utilising modern technology (except the Wi-Fi.)
+  //     As an innovative student with a background in all thing's tech & I am committed to improving the technological landscape of TBSA to enhance student experience business (I mean, someone has to, right?), by effectively utilising modern technology (except the Wi-Fi.)
       
-      My vision is to leverage technology to create an interactive digital ecosystem for TBSA members. Even your grandma will want to sign up.
+  //     My vision is to leverage technology to create an interactive digital ecosystem for TBSA members. Even your grandma will want to sign up.
       
-      Key Initiatives
-      1.	Creating the TBSA Website; Revamping Digital Presence
-          -	For better navigation and accessibility.
-          -	Up-to-date content, event listings, and announcements.
-          -	Implement a feedback system to continuously enhance the platform.
+  //     Key Initiatives
+  //     1.	Creating the TBSA Website; Revamping Digital Presence
+  //         -	For better navigation and accessibility.
+  //         -	Up-to-date content, event listings, and announcements.
+  //         -	Implement a feedback system to continuously enhance the platform.
       
-      2.	Enhanced Communication & Collaboration Tools
-          -	Introduce a structured digital workspace (Discord) for TBSA executives and members.
-          -	Develop a centralized resource hub for important documents and updates.
+  //     2.	Enhanced Communication & Collaboration Tools
+  //         -	Introduce a structured digital workspace (Discord) for TBSA executives and members.
+  //         -	Develop a centralized resource hub for important documents and updates.
       
-      3.	Automation & Data
-          -	Create user-friendly systems for event registrations and feedback collection.
-          -	Implement data driven statistics and reporting tools for events. To find the most needed events.
+  //     3.	Automation & Data
+  //         -	Create user-friendly systems for event registrations and feedback collection.
+  //         -	Implement data driven statistics and reporting tools for events. To find the most needed events.
       
-      4.	Support for Student Tech Initiatives
-          -	Provide resources for students interested in tech projects.
-          -	Encourage partnerships with local and global tech communities.
+  //     4.	Support for Student Tech Initiatives
+  //         -	Provide resources for students interested in tech projects.
+  //         -	Encourage partnerships with local and global tech communities.
       
-      By voting for me as your Vice President Technology, you are supporting a future where technology empowers students through exposure and enhances their experience. Let's build a smarter TBSA!`,
-  },
+  //     By voting for me as your Vice President Technology, you are supporting a future where technology empowers students through exposure and enhances their experience. Let's build a smarter TBSA!`,
+  // },
   ];
 
   // Group candidates by position
