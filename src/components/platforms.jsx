@@ -820,7 +820,7 @@ Contact: ethenninan@trentu.ca
 
       Beyond improving digital accessibility, I will take an active role in ensuring that technology works for students, not against them. Whether it’s troubleshooting issues that affect student engagement, optimizing event check-in systems, or ensuring that livestreamed events run smoothly, my priority will be to remove barriers and make TBSA’s initiatives as seamless as possible. My approach is not just about fixing problems—it’s about proactively designing solutions that enhance the overall student experience.
 
-      I have built my time at Trent around service—ensuring that the organizations I work with leave a meaningful impact on students. With your support, I will continue working towards a Trent that is more connected, efficient, and enriched with opportunities for every student.
+      I have built my time at Trent around service—ensuring that the organizations I work with leave a meaningful impact on students. With your support, I will continue working towards a Trent that is more connected, efficient, and enriched with opportunities for every student!
 `,
     },
   //   {
