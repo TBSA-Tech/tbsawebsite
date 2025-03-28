@@ -602,31 +602,31 @@ With my proficiency in graphic design, content creation, videography and social 
 In a nutshell, my tenure aims to bridge the gap between the TBSA and the students it stands for. Through creating a stronger, safer and more interactive online presence, I will see to it that the Association isn’t just one they hear about or see around, its one they engage with. With support from the amazing team, there’s no telling the heights the TBSA can attain. Let’s make sure every student knows, and benefits from the TBSA.
 `,
     },
-    {
-      id:15,
-      name: 'Kiflain Rahman',
-      position: 'vp-comms',
-      image: 'img/platforms/Rahman.JPG',
-      linkedin: 'https://www.linkedin.com/in/kiflain-rahman/',
-      resume: 'img/platforms/Rahman.pdf',
-      platform: `My name is Kiflain Rahman, a third-year BBA/LLB student at Trent University, and I am excited to run for a position on the Trent Business Student Association (TBSA). With a strong background in leadership, sales, and customer service, I am eager to contribute to the TBSA by fostering professional growth, networking opportunities, and student engagement within our business community.
+//     {
+//       id:15,
+//       name: 'Kiflain Rahman',
+//       position: 'vp-comms',
+//       image: 'img/platforms/Rahman.JPG',
+//       linkedin: 'https://www.linkedin.com/in/kiflain-rahman/',
+//       resume: 'img/platforms/Rahman.pdf',
+//       platform: `My name is Kiflain Rahman, a third-year BBA/LLB student at Trent University, and I am excited to run for a position on the Trent Business Student Association (TBSA). With a strong background in leadership, sales, and customer service, I am eager to contribute to the TBSA by fostering professional growth, networking opportunities, and student engagement within our business community.
 
-      My diverse experience in sales, marketing, and leadership has equipped me with the skills needed to represent and advocate for business students effectively:
-•	Sales Representative at Pepsico Canada – Strengthened my ability to communicate persuasively and promote products effectively.
-•	Leadership and Teamwork – Gained expertise in problem-solving and collaboration through various roles, including as a team lead at Galati Market Fresh and a long-term volunteer at A.Y. Jackson Secondary School.
-•	Marketing and Customer Engagement – Experience as an advertiser and marketing strategist, ensuring effective outreach and student involvement.
-•	Multilingual & Adaptive – Fluent in English, French, Hindi, and Urdu, enabling me to connect with a diverse student body and foster an inclusive environment.
+//       My diverse experience in sales, marketing, and leadership has equipped me with the skills needed to represent and advocate for business students effectively:
+// •	Sales Representative at Pepsico Canada – Strengthened my ability to communicate persuasively and promote products effectively.
+// •	Leadership and Teamwork – Gained expertise in problem-solving and collaboration through various roles, including as a team lead at Galati Market Fresh and a long-term volunteer at A.Y. Jackson Secondary School.
+// •	Marketing and Customer Engagement – Experience as an advertiser and marketing strategist, ensuring effective outreach and student involvement.
+// •	Multilingual & Adaptive – Fluent in English, French, Hindi, and Urdu, enabling me to connect with a diverse student body and foster an inclusive environment.
 
-If elected, I will focus on the following key initiatives to enhance the TBSA’s impact:
-1.	Expanding Professional Development – Organizing workshops, networking events, and guest speaker sessions to bridge the gap between students and industry professionals.
-2.	Enhancing Student Engagement – Creating more opportunities for students to participate in business case competitions, mentorship programs, and skill-building activities.
-3.	Strengthening Communication – Improving outreach through social media, newsletters, and student feedback channels to ensure TBSA remains transparent and responsive to student concerns.
-4.	Promoting Inclusivity – Encouraging greater involvement from international and underrepresented students by providing tailored resources and support.
+// If elected, I will focus on the following key initiatives to enhance the TBSA’s impact:
+// 1.	Expanding Professional Development – Organizing workshops, networking events, and guest speaker sessions to bridge the gap between students and industry professionals.
+// 2.	Enhancing Student Engagement – Creating more opportunities for students to participate in business case competitions, mentorship programs, and skill-building activities.
+// 3.	Strengthening Communication – Improving outreach through social media, newsletters, and student feedback channels to ensure TBSA remains transparent and responsive to student concerns.
+// 4.	Promoting Inclusivity – Encouraging greater involvement from international and underrepresented students by providing tailored resources and support.
 
-I am committed to making the TBSA a more dynamic and student-focused organization. With my experience in leadership, marketing, and problem-solving, I believe I can drive meaningful change that benefits all business students. I would be honored to represent you—vote Kiflain Rahman for TBSA Executive!
+// I am committed to making the TBSA a more dynamic and student-focused organization. With my experience in leadership, marketing, and problem-solving, I believe I can drive meaningful change that benefits all business students. I would be honored to represent you—vote Kiflain Rahman for TBSA Executive!
 
-`,
-    },
+// `,
+//     },
     {
       id:16,
       name: 'Angadveer Sigh Bedi',
