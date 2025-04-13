@@ -131,7 +131,7 @@ export function ElectionResults() {
             percentage: 27,
         },
         {
-          name: "Rita Agyemang",
+          name: "Rita Sobayo",
           image: "img/platforms/nike.png",
           votes: 19,
           percentage: 17,
@@ -254,7 +254,7 @@ export function ElectionResults() {
 
       <div className="container main-content">
         <div className="results-intro">
-          <h3>2024-2025 TBSA Executive Team</h3>
+          <h3>2025-2026 TBSA Executive Team</h3>
           <p>
             The votes have been counted and we're excited to announce the results
             of the TBSA elections. Thank you to all candidates who participated
