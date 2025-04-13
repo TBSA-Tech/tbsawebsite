@@ -201,8 +201,8 @@ export function ElectionResults() {
       winner: {
         name: "Dhrumil Dungrani",
         image: "img/platforms/dave.jpg",
-        votes: 215,
-        percentage: 54,
+        votes: 98,
+        percentage: 90,
       },
       runnerUps: [
         
