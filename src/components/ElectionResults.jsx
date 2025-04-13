@@ -236,7 +236,7 @@ export function ElectionResults() {
                 className="header-logo"
                 style={{height: 50}}
               />
-              <h1>2025-2026 Election Results</h1>
+              <h1>2025-26 Election Results</h1>
             </div>
           </div>
         </div>
@@ -279,7 +279,7 @@ export function ElectionResults() {
               <div className="stat-label">Total Candidates</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value">8</div>
+              <div className="stat-value">9</div>
               <div className="stat-label">Positions Filled</div>
             </div>
           </div>
