@@ -9,6 +9,7 @@ import {
   Home,
   Linkedin,
   FileText,
+  Award,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Contact } from "./contact";
@@ -892,6 +893,10 @@ Contact: ethenninan@trentu.ca
               <Home size={20} />
               <span>Home</span>
             </Link>
+            <Link to="/results" className="home-link">
+              <Award size={20} />
+              <span>Election Results</span>
+            </Link>
             <div className="logo-container">
               <img
                 src="/img/logo.png"
@@ -914,7 +919,7 @@ Contact: ethenninan@trentu.ca
         </div>
       </header>
 
-      <div className="hero-section">
+      <div className="hero-section" style={{ marginTop: 0 }}>
         <div className="overlay">
           <h2 className="fade-in">Meet Your Candidates</h2>
           <p className="fade-in delay">

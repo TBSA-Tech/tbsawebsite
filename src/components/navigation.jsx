@@ -53,7 +53,7 @@ export const Navigation = (props) => {
                         <a href="#team" onClick={handleLinkClick}>Team</a>
                     </li>
                     <li className="nav-item" style={{"--i": "4"}}>
-                        <a href="/platforms" onClick={handleLinkClick}>Elections</a>
+                        <a href="/results" onClick={handleLinkClick}>Election Results</a>
                     </li>
                     <li className="nav-item" style={{"--i": "5"}}>
                         <a href="#contact" onClick={handleLinkClick}>Contact</a>

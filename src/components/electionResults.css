@@ -1,0 +1,420 @@
+/* Election Results Styles */
+.results-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .results-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/trent-campus.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .results-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto 4rem;
+    padding: 0 1.5rem;
+  }
+  
+  .results-intro h3 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .results-intro h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+  }
+  
+  .results-intro p {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    line-height: 1.8;
+  }
+  
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin: 2rem 0 4rem;
+  }
+  
+  .result-card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    padding: 2rem;
+    
+  }
+  
+  .result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 112, 60, 0.15);
+  }
+  
+  .position-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .position-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  .position-icon {
+    color: var(--primary);
+    background-color: rgba(0, 112, 60, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .winner-section {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .winner-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--secondary);
+    color: #000;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(248, 184, 0, 0.3);
+  }
+  
+  .candidate-result {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .candidate-result.winner {
+    background-color: rgba(0, 112, 60, 0.05);
+    border: 1px solid rgba(0, 112, 60, 0.1);
+  }
+  
+  .candidate-result.runner-up {
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  .candidate-image-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0, 112, 60, 0.2);
+  }
+  
+  .winner .candidate-image-container {
+    border-color: var(--secondary);
+    box-shadow: 0 5px 15px rgba(248, 184, 0, 0.3);
+  }
+  
+  .winner-crown {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f8b800"><path d="M12 2L8 6 4 2 2 12 22 12 20 2 16 6z"/><path d="M3 13H21V22H3z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .candidate-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .candidate-info {
+    flex: 1;
+  }
+  
+  .candidate-info h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+  }
+  
+  .vote-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .vote-count {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+  
+  .vote-count span {
+    font-weight: 700;
+    color: var(--foreground);
+  }
+  
+  .vote-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .vote-bar {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+  }
+  
+  .vote-bar.runner-up-bar {
+    background-color: #a0aec0;
+  }
+  
+  .vote-percentage {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--foreground);
+  }
+  
+  .runner-ups-section {
+    margin-top: 1.5rem;
+  }
+  
+  .runner-ups-section h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+  }
+  
+  .results-summary {
+    margin: 4rem 0;
+    text-align: center;
+  }
+  
+  .results-summary h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .results-summary h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .stat-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    text-align: center;
+  }
+
+  /* Add these styles for the No Choice section */
+.no-choice-section {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+    
+  }
+  
+  .no-choice-section h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+  }
+  
+  .candidate-result.no-choice {
+    background-color: rgba(0, 0, 0, 0.02);
+    border: 1px dashed #e2e8f0;
+  }
+  
+  .no-choice-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0aec0;
+    margin-right: 0.5rem;
+  }
+  
+  .vote-bar.no-choice-bar {
+    background-color: #cbd5e0;
+  }
+  
+  /* Animation for vote bars */
+  @keyframes growBar {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .vote-bar {
+    animation: growBar 1.5s ease-out forwards;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .results-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .results-intro h3 {
+      font-size: 1.75rem;
+    }
+    
+    .results-intro p {
+      font-size: 1rem;
+    }
+    
+    .results-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .position-header h3 {
+      font-size: 1.25rem;
+    }
+    
+    .candidate-image-container {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .candidate-info h4 {
+      font-size: 1rem;
+    }
+    
+    .stat-value {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .results-intro {
+      margin: 2rem auto 3rem;
+    }
+    
+    .result-card {
+      padding: 1.5rem;
+    }
+    
+    .candidate-result {
+      padding: 1rem;
+      gap: 1rem;
+    }
+    
+    .candidate-image-container {
+      width: 50px;
+      height: 50px;
+      border-width: 2px;
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    .stat-card {
+      padding: 1.5rem 1rem;
+    }
+    
+    .stat-value {
+      font-size: 1.75rem;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
