@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./testimonials.css"; // We'll create this file next
+import "./testimonials.css"; 
 
 export const Testimonials = () => {
   useEffect(() => {
