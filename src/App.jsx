@@ -11,6 +11,7 @@ import { Team } from "./components/Team";
 import { CandidatePlatforms } from "./components/platforms";
 import { ElectionResults } from "./components/ElectionResults";
 import { Contact } from "./components/contact";
+import { CorporateCrawl } from "./components/CorporateCrawl";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
@@ -47,6 +48,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route path="/platforms" component={CandidatePlatforms} />
           <Route path="/results" component={ElectionResults} />
+          <Route path="/corporatecrawl" component={CorporateCrawl} />
         </Switch>
       </div>
     </Router>

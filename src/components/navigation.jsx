@@ -30,6 +30,28 @@ export const Navigation = (props) => {
     return null;
   }
 
+  // Render a simplified nav on Corporate Crawl page
+  if (location.pathname === '/corporatecrawl') {
+    return (
+      <nav className={`main-navigation ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="nav-container">
+          <div className="nav-logo">
+            <a href="/">
+              <img src="img/logo.png" alt="Company Logo" className="logo-image" />
+            </a>
+          </div>
+          <div className="nav-menu">
+            <ul className="nav-links-list">
+              <li className="nav-item" style={{"--i": "0"}}>
+                <a href="/" onClick={handleLinkClick}>Main Menu</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
   return (
     <nav className={`main-navigation ${isScrolled ? 'scrolled' : ''} ${mobileMenuOpen ? 'menu-open' : ''}`}>
         <div className="nav-container">

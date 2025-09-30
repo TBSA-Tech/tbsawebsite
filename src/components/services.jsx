@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./services.css";
 
 export const Services = () => {
-  // Start the calendar on March 2025 so you see events right away.
-  // You can revert to new Date() if you want to start at the current date.
-  const [currentMonth, setCurrentMonth] = useState(new Date(2025, 2, 1)); // March 2025
+  // Start the calendar on the current month
+  const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [animatingOut, setAnimatingOut] = useState(false);
@@ -143,6 +142,26 @@ export const Services = () => {
         "img/events/BTB-5.jpeg",
         "img/events/BTB-4.jpeg",
       ]
+    },
+
+    // October 2025 Events
+    {
+      date: "2025-10-03",
+      title: "Corporate Crawl",
+      type: "Networking",
+      location: "Peterborough, Ontario",
+      time: "11:00 AM - 3:00 PM",
+      description:
+        "Experience the Corporate Crawl: visit companies, meet professionals, and explore career opportunities.",
+      bannerImage:
+        "img/events/corporatecrawl2025/cc25Banner.png",
+      galleryImages: [
+        "/img/events/CC-1.jpeg",
+        "/img/events/CC-2.jpeg",
+        "/img/events/CC-4.jpeg",
+        "/img/events/CC-6.jpeg",
+      ],
+      registerPath: "/corporatecrawl"
     }
   ];
 
@@ -183,6 +202,24 @@ export const Services = () => {
     const eDate = new Date(eventDate);
     return eDate < now; 
   };
+
+  // On mount: if current month has no events, jump to the next month with an upcoming event
+  useEffect(() => {
+    const today = new Date();
+    const hasEventsThisMonth = events.some((event) => isDateInMonth(event.date, today));
+    if (!hasEventsThisMonth) {
+      const todayStartOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+      const upcoming = [...events]
+        .map((e) => ({ ...e, _date: new Date(e.date) }))
+        .filter((e) => e._date >= todayStartOfMonth)
+        .sort((a, b) => a._date - b._date)[0];
+
+      if (upcoming) {
+        const d = upcoming._date;
+        setCurrentMonth(new Date(d.getFullYear(), d.getMonth(), 1));
+      }
+    }
+  }, []);
 
   const debugEvents = () => {
     console.log("Current Month:", currentMonth.getMonth(), currentMonth.getFullYear());
@@ -413,8 +450,8 @@ export const Services = () => {
                   <p>{selectedEvent.description}</p>
                 </div>
 
-                {/* Conditionally render a gallery for past events if images exist */}
-                {isPastEvent(selectedEvent.date) && selectedEvent.galleryImages?.length > 0 && (
+                {/* Render gallery when images exist */}
+                {selectedEvent.galleryImages?.length > 0 && (
                   <div className="event-gallery">
                     <strong>Event Gallery:</strong>
                     <div className="gallery-container">
@@ -433,7 +470,13 @@ export const Services = () => {
                   You could also conditionally hide or show this button depending on your needs. */}
               {!isPastEvent(selectedEvent.date) && (
                 <div className="trent-event-modal-footer">
-                  <button className="trent-event-register-btn">Register Now</button>
+                  {selectedEvent.registerPath ? (
+                    <a className="trent-event-register-btn" href={selectedEvent.registerPath}>
+                      Register Now
+                    </a>
+                  ) : (
+                    <button className="trent-event-register-btn">Register Now</button>
+                  )}
                 </div>
               )}
             </div>
