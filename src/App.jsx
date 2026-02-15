@@ -46,7 +46,8 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/platforms" component={CandidatePlatforms} />
-          <Route path="/results" component={ElectionResults} />
+          {/* Election Results page temporarily hidden - route removed, component kept */}
+          {/* <Route path="/results" component={ElectionResults} /> */}
         </Switch>
       </div>
     </Router>
