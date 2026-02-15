@@ -9,7 +9,6 @@ import {
   Home,
   Linkedin,
   FileText,
-  Award,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Contact } from "./contact";
@@ -893,10 +892,6 @@ Contact: ethenninan@trentu.ca
               <Home size={20} />
               <span>Home</span>
             </Link>
-            <Link to="/results" className="home-link">
-              <Award size={20} />
-              <span>Election Results</span>
-            </Link>
             <div className="logo-container">
               <img
                 src="/img/logo.png"
@@ -962,42 +957,17 @@ Contact: ethenninan@trentu.ca
                       >
                         <div
                           className="candidate-summary-image"
+                          style={{ display: "none" }}
                           onClick={(e) => toggleCandidate(candidate.id, e)}
                         >
                           <img
                             src={candidate.image || "/placeholder.svg"}
-                            alt={candidate.name}
+                            alt="Candidate Name Coming Soon"
                           />
                         </div>
                         <h3 onClick={(e) => toggleCandidate(candidate.id, e)}>
-                          {candidate.name}
+                          {"Candidate Name Coming Soon"}
                         </h3>
-                        <div className="candidate-profile-links">
-                          {candidate.resume && (
-                            <a
-                              href={candidate.resume}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="profile-button resume-button"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <FileText size={16} />
-                              Resume
-                            </a>
-                          )}
-                          {candidate.linkedin && (
-                            <a
-                              href={candidate.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="profile-button linkedin-button"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <Linkedin size={16} />
-                              LinkedIn
-                            </a>
-                          )}
-                        </div>
                       </div>
                     ))}
                   </div>
@@ -1008,15 +978,15 @@ Contact: ethenninan@trentu.ca
                           className="candidate-header"
                           onClick={(e) => toggleCandidate(candidate.id, e)}
                         >
-                          <div className="candidate-image-container">
+                          <div className="candidate-image-container" style={{ display: "none" }}>
                             <img
                               src={candidate.image || "/placeholder.svg"}
-                              alt={candidate.name}
+                              alt="Candidate Name Coming Soon"
                               className="candidate-image"
                             />
                           </div>
                           <div className="candidate-info">
-                            <h3>{candidate.name}</h3>
+                            <h3>{"Candidate Name Coming Soon"}</h3>
                             <p className="candidate-position">
                               {position.title}
                             </p>
@@ -1038,7 +1008,7 @@ Contact: ethenninan@trentu.ca
                             <h4>Platform</h4>
                             <p 
                             dangerouslySetInnerHTML={{ 
-                              __html: candidate.platform
+                              __html: "Platform details will be published shortly."
                                 .replace(/\n/g, '<br>')
                                 .replace(/\s\s+/g, ' &nbsp;') 
                             }}
@@ -1068,44 +1038,19 @@ Contact: ethenninan@trentu.ca
                 <div className="candidates-summary">
                   {filteredCandidates.map((candidate) => (
                     <div key={candidate.id} className="candidate-summary-card">
-                      <div
-                        className="candidate-summary-image"
-                        onClick={(e) => toggleCandidate(candidate.id, e)}
-                      >
+                        <div
+                          className="candidate-summary-image"
+                          style={{ display: "none" }}
+                          onClick={(e) => toggleCandidate(candidate.id, e)}
+                        >
                         <img
                           src={candidate.image || "/placeholder.svg"}
-                          alt={candidate.name}
+                          alt="Candidate Name Coming Soon"
                         />
                       </div>
                       <h3 onClick={(e) => toggleCandidate(candidate.id, e)}>
-                        {candidate.name}
+                        {"Candidate Name Coming Soon"}
                       </h3>
-                      <div className="candidate-profile-links">
-                        {candidate.resume && (
-                          <a
-                            href={candidate.resume}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="profile-button resume-button"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <FileText size={16} />
-                            Resume
-                          </a>
-                        )}
-                        {candidate.linkedin && (
-                          <a
-                            href={candidate.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="profile-button linkedin-button"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <Linkedin size={16} />
-                            LinkedIn
-                          </a>
-                        )}
-                      </div>
                     </div>
                   ))}
                 </div>
@@ -1117,15 +1062,15 @@ Contact: ethenninan@trentu.ca
                         className="candidate-header"
                         onClick={(e) => toggleCandidate(candidate.id, e)}
                       >
-                        <div className="candidate-image-container">
+                        <div className="candidate-image-container" style={{ display: "none" }}>
                           <img
                             src={candidate.image || "/placeholder.svg"}
-                            alt={candidate.name}
+                            alt="Candidate Name Coming Soon"
                             className="candidate-image"
                           />
                         </div>
                         <div className="candidate-info">
-                          <h3>{candidate.name}</h3>
+                          <h3>{"Candidate Name Coming Soon"}</h3>
                           <p className="candidate-position">
                             {positions.find((p) => p.id === candidate.position)
                               ?.title || candidate.position}
@@ -1148,7 +1093,7 @@ Contact: ethenninan@trentu.ca
                           <h4>Platform</h4>
                             <p 
                           dangerouslySetInnerHTML={{ 
-                            __html: candidate.platform
+                            __html: "Platform details will be published shortly."
                               .replace(/\n/g, '<br>')
                               .replace(/\s\s+/g, ' &nbsp;') 
                           }}
